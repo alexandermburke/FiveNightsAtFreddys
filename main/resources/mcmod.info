@@ -2,15 +2,16 @@
 {
   "modid": "fnaf",
   "name": "Five nights at Freddy's V2 Mod",
-  "description": "Yes it is finally here :P",
+  "description": "FNAF like you never seen it before.",
   "version": "2.0.0",
   "mcversion": "1.7.0",
   "url": "",
   "updateUrl": "",
-  "authorList": ["T0psid3, RadDevVan, Cheech, ErvinGamez, Sonic_Daniel, Enderoffire, and Avr33"],
+  "authorList": ["xch0w, T0psid3 and Cheech"],
   "credits": "",
   "logoFile": "LogoFile.png",
   "screenshots": [],
   "dependencies": []
 }
 ]
+
