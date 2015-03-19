@@ -9,9 +9,13 @@
 
 
 
-package net.minecraft.src;
+package com.FnafVTwo.Client.Mobs.Models.SpringTrap;
 
-public class Modelbonnie extends ModelBase
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.entity.Entity;
+
+public class SpringTrap extends ModelBase
 {
   //fields
     ModelRenderer Right_Leg_1;
@@ -64,7 +68,7 @@ public class Modelbonnie extends ModelBase
     ModelRenderer Upper_Teeth;
     ModelRenderer Upper_Mouth_3;
   
-  public Modelbonnie()
+  public SpringTrap()
   {
     textureWidth = 128;
     textureHeight = 64;
@@ -437,7 +441,7 @@ public class Modelbonnie extends ModelBase
   
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
   {
-    super.setRotationAngles(f, f1, f2, f3, f4, f5);
+    super.setRotationAngles(f, f1, f2, f3, f4, f5, null);
   }
 
 }
