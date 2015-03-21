@@ -1,1 +1,13 @@
 itemGroup.standard=Five Nights At Freddys
+entity.SpringTrap.name=SpringTrap
+entity.mangle.name=Mangle
+entity.freddy.name=Freddy
+entity.foxy.name=Foxy
+entity.goldenfreddy.name=Golden Freddy
+entity.puppet.name=Marionette or Puppet
+entity.toybonnie.name=Toy Bonnie
+entity.toychica.name=Toy Chica
+entity.toyfreddy.name=Toy Freddy
+item.steel_ingot.name=Steel Ingot
+item.plastic_ingot.name=Plastic Ingot
+item.foxys_hook.name=Foxys Hook

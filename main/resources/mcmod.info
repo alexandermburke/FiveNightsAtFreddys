@@ -1,13 +1,13 @@
 [
 {
-  "modid": "fnaf",
+  "modid": "fnaf2",
   "name": "Five nights at Freddy's V2 Mod",
   "description": "Yes it is finally here :P",
   "version": "2.0.0",
   "mcversion": "1.7.0",
   "url": "",
   "updateUrl": "",
-  "authorList": ["T0psid3, RadDevVan, Cheech, ErvinGamez, Sonic_Daniel, Enderoffire, and Avr33"],
+  "authorList": ["Xch0w, ChuchoTheSpanishMan, And T0psid3"],
   "credits": "",
   "logoFile": "LogoFile.png",
   "screenshots": [],
