@@ -3,8 +3,6 @@ package com.fnaf.Client.Entity.springtrap;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 
-import com.sun.xml.internal.stream.Entity;
-
 public class Springtrap extends ModelBase
 {
   //fields

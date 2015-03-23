@@ -16,6 +16,11 @@ public class EntityFreddy {
 		createEntity(EntityFreddyMob.class, "Freddy", 0x7D6706, 0x9C8627);
 		
 	}
+	/**
+	 * Fisk, go look at some other mod's code, BTW dont forget to slam the door angrly on the way out
+	 * @return
+	 */
+	
 	//Sounds
 	protected String getLivingSound()
 	{

@@ -1,4 +1,11 @@
+
+Creative tabs
+
 itemGroup.standard=Five Nights At Freddys
+
+Entitys
+
+
 entity.SpringTrap.name=SpringTrap
 entity.mangle.name=Mangle
 entity.freddy.name=Freddy
@@ -8,6 +15,20 @@ entity.puppet.name=Marionette or Puppet
 entity.toybonnie.name=Toy Bonnie
 entity.toychica.name=Toy Chica
 entity.toyfreddy.name=Toy Freddy
+
+
+Items
+
+
+item.chicas_cupcake.name=Chica's Cupcake
 item.steel_ingot.name=Steel Ingot
 item.plastic_ingot.name=Plastic Ingot
 item.foxys_hook.name=Foxys Hook
+
+
+Tile
+
+
+tile.steel_ore.name=Steel Ore
+tile.plastic_ore.name=Plastic Ore
+tile.animatronic_spawner.name=Animatronic Spawner

@@ -2,6 +2,9 @@ package com.fnaf.Common.main;
 
 
 
+import com.fnaf.Client.Entity.WitheredBonnie.EntityWitheredBonnieMob;
+import com.fnaf.Client.Entity.WitheredBonnie.RenderWitheredBonnie;
+import com.fnaf.Client.Entity.WitheredBonnie.WitheredBonnie;
 import com.fnaf.Client.Entity.balloonboy.BalloonBoy;
 import com.fnaf.Client.Entity.balloonboy.EntityBalloonBoyMob;
 import com.fnaf.Client.Entity.balloonboy.RenderBalloonBoy;
@@ -58,6 +61,9 @@ public class ClientProxy extends ServerProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityMangleMob.class, new RenderMangle(new Mangle(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityToyBonnieMob.class, new RenderToyBonnie(new ToyBonnie(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityToyChicaMob.class, new RenderToyChica(new ToyChica(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(EntityWitheredBonnieMob.class, new RenderWitheredBonnie(new WitheredBonnie(), 0));
+		
+		
 	}
 
 }

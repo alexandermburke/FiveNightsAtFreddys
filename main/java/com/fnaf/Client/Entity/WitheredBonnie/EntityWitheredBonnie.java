@@ -1,19 +1,19 @@
-package com.fnaf.Client.Entity.endo;
+package com.fnaf.Client.Entity.WitheredBonnie;
 
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
+
 import cpw.mods.fml.common.registry.EntityRegistry;
 
-public class EntityEndo {
-	
+public class EntityWitheredBonnie {
 	public static void mainRegistry(){
 		registerEntity();
 	}
 	
 	public static void registerEntity(){
 		
-		createEntity(EntityEndoMob.class, "Endo", 0x82827F, 0xB8B8B8);
+		createEntity(EntityWitheredBonnieMob.class, "Withered Bonnie", 0x525023, 0xEBEBEB);
 		
 	}
 	//Sounds

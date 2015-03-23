@@ -1,4 +1,4 @@
-package com.fnaf.Client.Entity.endo;
+package com.fnaf.Client.Entity.WitheredBonnie;
 
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -9,9 +9,11 @@ import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.init.Items;
 import net.minecraft.world.World;
 
-public class EntityEndoMob extends EntityAnimal{
+import com.fnaf.Client.Entity.bonnie.EntityBonnieMob;
 
-	public EntityEndoMob(World par1World) {
+public class EntityWitheredBonnieMob extends EntityAnimal{
+
+	public EntityWitheredBonnieMob(World par1World) {
 		super(par1World);
 		this.setSize(0.5F, 0.4F);
 		this.tasks.addTask(0, new EntityAIWander(this, 0.5D));
@@ -34,7 +36,7 @@ public class EntityEndoMob extends EntityAnimal{
 	@Override
 	public EntityAgeable createChild(EntityAgeable p_90011_1_) {
 		
-		return new EntityEndoMob(worldObj);
+		return new EntityWitheredBonnieMob(worldObj);
 	}
 
 	

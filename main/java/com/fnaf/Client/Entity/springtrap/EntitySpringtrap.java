@@ -1,7 +1,5 @@
 package com.fnaf.Client.Entity.springtrap;
 
-import com.fnaf.Common.main.Strings;
-
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureType;
