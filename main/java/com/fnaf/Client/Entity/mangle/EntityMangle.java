@@ -23,7 +23,7 @@ public class EntityMangle {
 	}
 	protected String getHurtSound()
 	{
-	    return "";
+	    return "CROWD_SMALL_CHIL_EC049202";
 	}
 	protected String getDeathSound()
 	{

@@ -2,6 +2,10 @@
 Creative tabs
 
 itemGroup.standard=Five Nights At Freddys
+itemGroup.standard2=Five Nights At Freddys Armor
+itemGroup.standard3=Five Nights At Freddys Blocks or Cameras
+
+
 
 Entitys
 
@@ -15,6 +19,18 @@ entity.puppet.name=Marionette or Puppet
 entity.toybonnie.name=Toy Bonnie
 entity.toychica.name=Toy Chica
 entity.toyfreddy.name=Toy Freddy
+entity.puppet.name=Marionette
+entity.freddy.name=Freddy
+entity.withered_bonnie.name=Withered Bonnie
+entity.balloonboy.name=Balloon Boy
+entity.chica.name=Chica
+entity.foxy.name=Foxy
+entity.goldenfreddy.name=Golden Freddy
+entity.bonnie.name=Bonnie
+entity.mangle.name=Mangle
+entity.toybonnie.name=Toy Bonnie
+entity.toychica.name=Toy Chica 
+entity.toyfreddy.name=Toy Freddy
 
 
 Items
@@ -24,6 +40,21 @@ item.chicas_cupcake.name=Chica's Cupcake
 item.steel_ingot.name=Steel Ingot
 item.plastic_ingot.name=Plastic Ingot
 item.foxys_hook.name=Foxys Hook
+item.freddy_mask.name=Freddy's Mask
+item.freddys_microphone.name=Freddy's Microphone
+item.bonnies_plushie.name=Plushie
+item.freddys_plushie.name=Plushie
+item.foxys_plushie.name=Plushie
+item.chicas_plushie.name=Plushie
+item.balloon_boys_plushie.name=Plushie
+item.golden_freddys_plushie.name=Plushie
+item.bonnies_guitar.name=Bonnie's Guitar
+item.camera_+.name=Mcreator ++ LOL
+item.bonnie_head.name=Bonnie's Head
+item.bonnie_torso.name=Bonnie's Chest
+item.bonnie_legs.name=Bonnie's Legs
+item.bonnie_feet.name=Bonnie's Feet
+
 
 
 Tile
@@ -32,3 +63,5 @@ Tile
 tile.steel_ore.name=Steel Ore
 tile.plastic_ore.name=Plastic Ore
 tile.animatronic_spawner.name=Animatronic Spawner
+tile.camera_block.name=Camera Screen
+

@@ -5,7 +5,15 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.fnaf.Client.Blocks.BlockCamera;
 import com.fnaf.Client.Blocks.SteelOre;
+import com.fnaf.Client.Items.Plushies.itemBalloonBoysPlushie;
+import com.fnaf.Client.Items.Plushies.itemBonniesPlushie;
+import com.fnaf.Client.Items.Plushies.itemChicasPlushie;
+import com.fnaf.Client.Items.Plushies.itemFoxysPlushie;
+import com.fnaf.Client.Items.Plushies.itemFreddysPlushie;
+import com.fnaf.Client.armor.bonnie.itemBonnie;
+import com.fnaf.Client.armor.freddy.itemFreddy;
 import com.fnaf.Common.main.mainRegistry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -16,6 +24,11 @@ public class fnaf2Items {
 		registerRecipes();
 		addSmelting();
 	}
+	public static Item FreddyHelmet;
+    public static Item BonnieHelmet;
+    public static Item BonnieChestplate;
+    public static Item BonnieLeggings;
+    public static Item BonnieBoots;
 	public static Item BGuitar;
 	public static Item BBPlushie;
 	public static Item PlasticIngot;
@@ -23,6 +36,7 @@ public class fnaf2Items {
 	public static Item Foxyshook1;
 	public static Item CPlushie;
 	public static Item Cupcake;
+	public static Item C;
 	public static Item FOPlushie;
 	public static Item FRPlushie;
 	public static Item FreddysMask;
@@ -31,21 +45,25 @@ public class fnaf2Items {
 	public static Item GPlushie;
 	public static Block SteelOres;
 	public static Block plasticOres;
+	public static Block CB;
 	public static Block Spawn;
 	
 	public static void register()
 	{
+		 
 		
 		
-		
-		BPlushie = new ItemPlush();
-		FRPlushie = new ItemPlush();
-		BBPlushie = new ItemPlush();
-		CPlushie = new ItemPlush();
-		FOPlushie = new ItemPlush();
-		GPlushie = new ItemPlush();
+		BPlushie = new itemBonniesPlushie();
+		FRPlushie = new itemFreddysPlushie();
+		BBPlushie = new itemBalloonBoysPlushie();
+		CPlushie = new itemChicasPlushie();
+		FOPlushie = new itemFoxysPlushie();
+		GPlushie = new itemFreddysPlushie();
 		Cupcake = new ItemPlush();
 		
+		
+		
+		C = new ItemPlush();
 		
 		PlasticIngot = new ItemIngot();
 		SteelIngot = new ItemIngot();
@@ -56,19 +74,20 @@ public class fnaf2Items {
 			
 		
 		
-		FreddysMask = new FreddysHead();
 		Foxyshook1 = new FoxysHook();
 		BGuitar = new FoxysHook();
 		FreddysMic = new FoxysHook();
 		
+		CB = new BlockCamera();
 		SteelOres = new SteelOre();
 		plasticOres = new SteelOre();
 		registerTheItem(FreddysMic, "Freddy's Microphone");
-		registerTheItem(FreddysMask, "Freddys Head");
 		registerTheItem(Cupcake, "Chica's Cupcake");
 		registerBlock(Spawn, "Animatronic Spawner");
 		registerBlock(SteelOres, "Steel Ore");
 		registerBlock(plasticOres, "Plastic Ore");
+		registerBlock(CB, "Camera Block");
+		registerTheItem(C, "Camera +");
 		registerTheItem(PlasticIngot, "Plastic Ingot");
 		registerTheItem(SteelIngot, "Steel Ingot");
 		registerTheItem(BPlushie, "Bonnie's Plushie");
@@ -79,8 +98,20 @@ public class fnaf2Items {
 		registerTheItem(Foxyshook1, "Foxys Hook");
 		registerTheItem(GPlushie, "Golden Freddy's Plushie");
 		registerTheItem(BGuitar, "Bonnie's Guitar");
-		
+		 BonnieHelmet = new itemBonnie(0);
+			registerArmor(BonnieHelmet, "Bonnie Head");
+			
+			BonnieChestplate = new itemBonnie(1);
+			registerArmor(BonnieChestplate, "Bonnie Torso");
+	        
+			BonnieLeggings = new itemBonnie(2);
+			registerArmor(BonnieLeggings, "Bonnie Legs");
+	        
+	    	BonnieBoots = new itemBonnie(3);
+	    	registerArmor(BonnieBoots, "Bonnie Feet");
 	
+			FreddysMask = new itemFreddy(0);
+			registerArmor(FreddysMask, "Freddy Mask");
 	}
 	public static void registerRecipes()
 	{
@@ -98,6 +129,16 @@ public class fnaf2Items {
 		GameRegistry.addSmelting(fnaf2Items.SteelOres, new ItemStack(fnaf2Items.SteelIngot, 1), 5.0F);
 	}
 
+	private static void registerArmor(Item item, String name)
+	{
+		String unlocalizedName = name.toLowerCase().replaceAll(" ", "_").replaceAll("'", "");
+		item.setUnlocalizedName(unlocalizedName);
+		item.setTextureName("fnaf2" + ":" + unlocalizedName);
+		item.setCreativeTab(mainRegistry.tabFnaf2);
+		
+		GameRegistry.registerItem(item, unlocalizedName);
+	}
+	
 	private static void registerTheItem(Item item, String name)
 	{
 		String unlocalizedName = name.toLowerCase().replaceAll(" ", "_").replaceAll("'", "");

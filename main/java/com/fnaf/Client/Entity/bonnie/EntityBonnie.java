@@ -40,6 +40,7 @@ public class EntityBonnie {
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	private static void createEgg(int randomId, int solidColor, int spotColor){
 		EntityList.entityEggs.put(Integer.valueOf(randomId), new EntityList.EntityEggInfo(randomId, solidColor, spotColor));
 		
