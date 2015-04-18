@@ -7,13 +7,13 @@ import net.minecraft.client.gui.ScaledResolution;
 
 public class TickHandler extends Gui
 {
-	 
-	/* 
-	 * Yes I know there are errors below, I am trying to fix them :P
+	{	 
+	/**
+	 * Errors below have been fixed.
 	 */
 	
 	if(Minecraft.getMinecraft().currentScreen == null){
-		ScaledResolution scaledresolution = new ScaledResolution(Minecraft.getMinecraft().gameSettings, Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
+		ScaledResolution scaledresolution = new ScaledResolution(null, 0, 0);
 		FontRenderer fontrenderer = Minecraft.getMinecraft().fontRenderer;
 		int width = scaledresolution.getScaledWidth();
 		int height = scaledresolution.getScaledHeight();
@@ -22,9 +22,12 @@ public class TickHandler extends Gui
 		
 		}
 
+			
+
+}
+
 	public static void mainregistry() {
 		// TODO Auto-generated method stub
 		
 	}
-}
 }

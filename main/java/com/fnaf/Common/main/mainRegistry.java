@@ -1,4 +1,5 @@
 package com.fnaf.Common.main;
+
 import com.fnaf.Client.Entity.WitheredBonnie.EntityWitheredBonnie;
 import com.fnaf.Client.Entity.balloonboy.EntityBalloonBoy;
 import com.fnaf.Client.Entity.bonnie.EntityBonnie;
@@ -13,6 +14,7 @@ import com.fnaf.Client.Entity.toybonnie.EntityToyBonnie;
 import com.fnaf.Client.Entity.toychica.EntityToyChica;
 import com.fnaf.Client.Entity.toyfreddy.EntityToyFreddy;
 import com.fnaf.Client.Items.fnaf2Items;
+import com.fnaf.Client.handlers.ForgeEventHandler;
 import com.fnaf.ClientSide.gui.HUD.TickHandler;
 import com.fnaf.Common.utils.CreativeTabFNAF;
 import com.fnaf.Common.utils.CreativeTabFNAF2;
@@ -25,6 +27,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Strings.MODID, name = Strings.name, version = Strings.version)
@@ -34,12 +37,19 @@ public class mainRegistry
 	public static CreativeTabs tabFnaf2 = new CreativeTabFNAF2(CreativeTabs.getNextID(), "standard2");
 	public static CreativeTabs tabFnaf = new CreativeTabFNAF(CreativeTabs.getNextID(), "standard");
 	
+	public static ForgeEventHandler FeventHandler = new ForgeEventHandler();
+	
 	
 	@SidedProxy(clientSide = "com.fnaf.Common.main.ClientProxy", serverSide = "com.fnaf.Common.main.ServerProxy")
 	public static ServerProxy proxy;
     
     @Instance(Strings.MODID)
     public static mainRegistry modInstance;
+    
+    @EventHandler
+	public void postInit(FMLPostInitializationEvent event){
+		MinecraftForge.EVENT_BUS.register(mainRegistry.FeventHandler);
+	}
     
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent PreEvent)
@@ -63,7 +73,7 @@ public class mainRegistry
     	EntityToyFreddy.mainRegistry();
     	fnaf2Items.mainRegistry();
     	TickHandler.mainregistry();
-    	
+    	ForgeEventHandler.mainRegistry();
     	proxy.registerRenderThings();
     	
     	
@@ -75,6 +85,10 @@ public class mainRegistry
     		
     	
     }
-    
+    protected static final String VERSION = "{$Version}";
+
+	public static String getVersion(){
+		return VERSION;
+	}
     
 }
