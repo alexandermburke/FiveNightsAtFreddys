@@ -1,6 +1,6 @@
 package com.fnaf.Client.Items.Plushies;
 
-import com.fnaf.Client.Entity.freddy.EntityFreddy;
+import com.fnaf.Common.Entity.freddy.EntityFreddy;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;

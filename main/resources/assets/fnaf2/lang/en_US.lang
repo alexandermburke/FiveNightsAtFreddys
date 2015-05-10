@@ -49,19 +49,23 @@ item.chicas_plushie.name=Plushie
 item.balloon_boys_plushie.name=Plushie
 item.golden_freddys_plushie.name=Plushie
 item.bonnies_guitar.name=Bonnie's Guitar
+item.knife.name=Purple Guy's Knife?
 item.camera_+.name=Mcreator ++ LOL
 item.bonnie_head.name=Bonnie's Head
 item.bonnie_torso.name=Bonnie's Chest
 item.bonnie_legs.name=Bonnie's Legs
 item.bonnie_feet.name=Bonnie's Feet
-
+item.enter_dev_mode.name=Enter dev Mode (Will crash if you are not a dev.)
 
 
 Tile
 
 
+tile.lootbox.name=LootBox
 tile.steel_ore.name=Steel Ore
 tile.plastic_ore.name=Plastic Ore
 tile.animatronic_spawner.name=Animatronic Spawner
 tile.camera_block.name=Camera Screen
+
+
 

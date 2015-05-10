@@ -2,7 +2,7 @@ package com.fnaf.Client.world.gen;
 
 import java.util.Random;
 
-import com.fnaf.Client.Items.fnaf2Items;
+import com.fnaf.Common.Items.fnaf2Items;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
@@ -36,6 +36,7 @@ public class Worldgenfnaf2 implements IWorldGenerator
 	{
 		generateOre(3, fnaf2Items.plasticOres, 5, 8, world, random, chunkX, chunkZ);
 		generateOre(6, fnaf2Items.SteelOres, 6, 40, world, random, chunkX, chunkZ);
+		generateOre(100, fnaf2Items.Loot, 100, 100, world, random, chunkX, chunkZ);
 	}
 	
 	public void generateNether(World world, Random random, int chunkX, int chunkZ)

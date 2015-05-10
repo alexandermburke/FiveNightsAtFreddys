@@ -2,7 +2,7 @@ package com.fnaf.Client.handlers;
 
 import java.util.Random;
 
-import com.fnaf.Common.main.mainRegistry;
+import com.fnaf.Client.main.mainRegistry;
 
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraftforge.common.MinecraftForge;
@@ -10,12 +10,10 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 
 public class ForgeEventHandler {
-
 	
 	
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerLoggedInEvent event){
-		@SuppressWarnings("unused")
 		ChatComponentTranslation chatcomponenttranslation = new ChatComponentTranslation("Thanks for signing up for the FNAF Mod Beta-Program, " + mainRegistry.getVersion() + "! Tip: " + getRandomTip(), new Object[0]);
 		}
 	private String getRandomTip(){
@@ -31,9 +29,17 @@ public class ForgeEventHandler {
     	}
 	}
 	public static void mainRegistry() {
+		RegisterEvent();
+		
+	}
+	public static void RegisterEvent() {
+		
+		
 		MinecraftForge.EVENT_BUS.register(mainRegistry.FeventHandler);
 		
 	}
+	
+	
 }
 
 
