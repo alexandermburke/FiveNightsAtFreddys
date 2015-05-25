@@ -1,6 +1,6 @@
 package com.fnaf.Common.Items;
  
-import com.fnaf.Client.main.mainRegistry;
+import com.fnaf.Client.main.main_fnaf;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -10,6 +10,6 @@ public class ItemPlush extends Item
 {
 public ItemPlush()
 {
-setCreativeTab(mainRegistry.tabFnaf);
+setCreativeTab(main_fnaf.tabFnaf);
 }
 }

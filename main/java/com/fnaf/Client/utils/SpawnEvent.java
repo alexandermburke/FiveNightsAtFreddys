@@ -15,6 +15,7 @@ public class SpawnEvent {
 	{
 		if(event.entity instanceof EntitySlime || event.entity instanceof EntityZombie || event.entity instanceof EntitySpider) {
 	    	event.setCanceled(true);
+	    	
 	    }
 	}
 	

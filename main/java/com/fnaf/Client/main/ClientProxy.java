@@ -2,10 +2,15 @@ package com.fnaf.Client.main;
 
 
 
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.item.Item;
 
+import com.fnaf.Common.Blocks.Camera;
 import com.fnaf.Common.Blocks.LootBox;
+import com.fnaf.Common.Blocks.render.RenderCamera;
 import com.fnaf.Common.Blocks.render.RenderLootBox;
+import com.fnaf.Common.Blocks.tileEntity.TileEntityCamera;
 import com.fnaf.Common.Blocks.tileEntity.TileEntityLootBox;
 import com.fnaf.Common.Entity.WitheredBonnie.EntityWitheredBonnieMob;
 import com.fnaf.Common.Entity.WitheredBonnie.RenderWitheredBonnie;
@@ -52,9 +57,8 @@ import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends ServerProxy{
-	
+
 	public void registerRenderThings(){
-		//Entity
 		RenderingRegistry.registerEntityRenderingHandler(EntityPuppetMob.class, new RenderPuppetMob(new Puppet(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFreddyMob.class, new RenderFreddyMob(new Freddy(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBalloonBoyMob.class, new RenderBalloonBoy(new BalloonBoy(), 0));
@@ -71,13 +75,5 @@ public class ClientProxy extends ServerProxy{
 		
 		
 		
-		//Blocks/Items
-		
-		TileEntitySpecialRenderer render1 = new RenderLootBox();
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLootBox.class, render1);
-		
-
-		
 	}
-
 }

@@ -2,6 +2,13 @@ package com.fnaf.Common.armor.freddy;
 
 import java.util.List;
 
+import com.fnaf.Client.gui.GUIDevMode;
+import com.fnaf.Client.gui.GUIFreddyMaskOverlay;
+import com.fnaf.Client.gui.GUIMask;
+import com.fnaf.Client.main.main_fnaf;
+
+import net.ilexiconn.llibrary.client.gui.GuiChangelog;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -63,10 +70,14 @@ public class itemFreddy extends ItemArmor
      */
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
     {
-    		if(true){
-				if(player instanceof EntityPlayer)((EntityPlayer)player).setHealth(99999);;
-				}
-
+    	 if (world.isRemote)
+ 	    {
+ 		    return;
+ 	    }
+ 	    else
+ 	    {
+ 		      	
+ 		    	    }
 			
     }
 

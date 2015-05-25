@@ -2,6 +2,8 @@ package com.fnaf.Common.armor.bonnie;
 
 import java.util.List;
 
+import com.fnaf.Client.main.ClientProxy;
+
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -10,7 +12,6 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.world.World;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -34,8 +35,12 @@ public class itemBonnie extends ItemArmor
     @SideOnly(Side.CLIENT)
     public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot)
     {
-        return null;
+    	
+    	  return getArmorModel(entityLiving, itemStack, armorSlot);
     }
+    
+    
+ 
     
     /**
      * Called by RenderBiped and RenderPlayer to determine the armor texture that 
@@ -52,7 +57,7 @@ public class itemBonnie extends ItemArmor
      */
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        return "fnaf2" + ":textures/armor/Bonnie.png";
+        return "fnaf2" + ":textures/models/bonnie.png";
     }
     
     /**
@@ -65,7 +70,7 @@ public class itemBonnie extends ItemArmor
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
     {
     		if(true){
-				if(player instanceof EntityPlayer)((EntityPlayer)player).setHealth(99999);;
+				if(player instanceof EntityPlayer)((EntityPlayer)player).setHealth(99999);
 				}
 
 			

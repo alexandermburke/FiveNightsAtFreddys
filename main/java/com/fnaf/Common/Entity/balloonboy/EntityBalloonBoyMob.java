@@ -24,26 +24,23 @@ public class EntityBalloonBoyMob extends EntityMob{
 
 	public EntityBalloonBoyMob(World par1World) {
 		super(par1World);
-		this.setSize(1F, 1F);
-		this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
-        this.tasks.addTask(7, new EntityAIWander(this, 1.0D));
+		this.setSize(10F, 10F);
+		this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, true));
         this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
-        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
 		
 		
 	}
 	
 	public boolean isAIEnabled(){
-		return true;
+		return false;
 	}
 	
 	protected void applyEntityAttributes(){
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(16.0F);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0F);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.15D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(1D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 	}
 
 

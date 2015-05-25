@@ -1,6 +1,6 @@
 package com.fnaf.Client.utils;
 
-import com.fnaf.Common.Items.fnaf2Items;
+import com.fnaf.Common.Items.FNAFItems;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -10,15 +10,15 @@ import cpw.mods.fml.relauncher.SideOnly;
  
 public class CreativeTabFNAF3 extends CreativeTabs {
  
-    public CreativeTabFNAF3(int id, String unlocalizedName) {
- 
-        super(id, unlocalizedName);
-    }
+	public CreativeTabFNAF3(String label) {
+		super(label);
+		this.setBackgroundImageName("fnaf.png");
+	}
  
     @SideOnly(Side.CLIENT)
     public Item getTabIconItem() {
  
         //return Item.getItemFromBlock(Blocks.chest);
-        return fnaf2Items.Knife;
+        return FNAFItems.Knife;
     }
 }
