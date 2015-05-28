@@ -1,7 +1,6 @@
 package com.fnaf.Client.main;
 
-import com.fnaf.Client.handlers.ForgeEventHandler;
-import com.fnaf.Client.network.ConfigurationHandler;
+import com.fnaf.Client.handler.ConfigurationHandler;
 import com.fnaf.Client.utils.CreativeTabFNAF;
 import com.fnaf.Client.utils.CreativeTabFNAF2;
 import com.fnaf.Client.utils.CreativeTabFNAF3;
@@ -42,7 +41,6 @@ public class main_fnaf
 	public static CreativeTabs tabFnaf = new CreativeTabFNAF("standard");
 	public static Configuration Config;
 	
-	public static ForgeEventHandler FeventHandler = new ForgeEventHandler();
 	public static Configuration configFile;	
 	
 	@SidedProxy(clientSide = "com.fnaf.Client.main.ClientProxy", serverSide = "com.fnaf.Client.main.ServerProxy")
@@ -55,7 +53,7 @@ public class main_fnaf
 	
     @EventHandler
 	public void postInit(FMLPostInitializationEvent event){
-		MinecraftForge.EVENT_BUS.register(main_fnaf.FeventHandler);
+		MinecraftForge.EVENT_BUS.register(main_fnaf.configHandler);
 	}
     
     @EventHandler
@@ -80,7 +78,6 @@ public class main_fnaf
     	EntityToyFreddy.mainRegistry();
     	FNAFItems.mainRegistry();
     	TickHandler.mainregistry();
-    	ForgeEventHandler.mainRegistry();
     	proxy.registerRenderThings();
     	
     	

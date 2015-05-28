@@ -5,6 +5,7 @@ import java.util.List;
 import com.fnaf.Client.gui.GUIDevMode;
 import com.fnaf.Client.gui.GUIFreddyMaskOverlay;
 import com.fnaf.Client.gui.GUIMask;
+import com.fnaf.Client.main.Strings;
 import com.fnaf.Client.main.main_fnaf;
 
 import net.ilexiconn.llibrary.client.gui.GuiChangelog;
@@ -58,7 +59,7 @@ public class itemFreddy extends ItemArmor
      */
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        return "fnaf2" + ":textures/armor/Freddy.png";
+        return Strings.MODID + ":" + "textures/armor/freddy.png";
     }
     
     /**

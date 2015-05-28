@@ -3,7 +3,7 @@ Creative tabs
 
 itemGroup.standard=Five Nights At Freddys
 itemGroup.standard2=Five Nights At Freddys Armor
-itemGroup.standard3=Five Nights At Freddys Blocks or Cameras
+itemGroup.standard3=Five Nights At Freddys Developer Tab
 
 
 
@@ -50,12 +50,12 @@ item.balloon_boys_plushie.name=Plushie
 item.golden_freddys_plushie.name=Plushie
 item.bonnies_guitar.name=Bonnie's Guitar
 item.knife.name=Purple Guy's Knife?
-item.camera_+.name=Camera
+item.tablet.name=Tablet
 item.bonnie_head.name=Bonnie's Head
 item.bonnie_torso.name=Bonnie's Chest
 item.bonnie_legs.name=Bonnie's Legs
 item.bonnie_feet.name=Bonnie's Feet
-item.enter_dev_mode.name=Enter dev Mode (Will crash if you are not a dev.)
+item.enter_dev_mode.name=Start Dev Console
 
 
 Tile
@@ -65,7 +65,7 @@ tile.lootbox.name=LootBox
 tile.steel_ore.name=Steel Ore
 tile.plastic_ore.name=Plastic Ore
 tile.animatronic_spawner.name=Animatronic Spawner
-tile.camera_block.name=Camera Screen
+tile.camera_block.name=Camera 
 
 
 

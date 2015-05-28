@@ -28,6 +28,17 @@ public class FNAFItems {
 		registerRecipes();
 		addSmelting();
 	}
+	
+	public static Item Pizza;
+	public static Item PartyHat1;
+	public static Item PartyHat2;
+	public static Item PartyHat3;
+	public static Item PartyHat4;
+	public static Item PartyHat5;
+	public static Item PartyHat6;
+	public static Item PartyHat7;
+	public static Item PartyHat8;
+	public static Item PartyHat9;
 	public static Item FreddyHelmet;
     public static Item BonnieHelmet;
     public static Item BonnieChestplate;
@@ -78,8 +89,20 @@ public class FNAFItems {
 		PlasticIngot = new ItemIngot();
 		SteelIngot = new ItemIngot();
 		
+		Pizza = new ItemIngot();
+		PartyHat1 = new ItemPartyHat();
+		PartyHat2 = new ItemPartyHat();
+		PartyHat3 = new ItemPartyHat();
+		PartyHat4 = new ItemPartyHat();
+		PartyHat5 = new ItemPartyHat();
+		PartyHat6 = new ItemPartyHat();
+		PartyHat7 = new ItemPartyHat();
+		PartyHat8 = new ItemPartyHat();
+		PartyHat9 = new ItemPartyHat();
 		
-		
+		/**
+		 * Blocks
+		 */
 		Spawn = new AnimatronicSpawner();
 			
 		
@@ -91,14 +114,19 @@ public class FNAFItems {
 		CB = new Camera();
 		SteelOres = new SteelOre();
 		plasticOres = new SteelOre();
+		
+		/**
+		 * Keep registerTheItem(E, "Enter Dev Mode"); off when uploading a new version of the mod
+		 * 
+		 */
 	//	registerTheItem(E, "Enter Dev Mode");
 		registerTheItem(FreddysMic, "Freddy's Microphone");
 		registerTheItem(Cupcake, "Chica's Cupcake");
-		registerBlock(Spawn, "Animatronic Spawner");
+	//	registerBlock(Spawn, "Animatronic Spawner");
 		registerBlock(SteelOres, "Steel Ore");
 		registerBlock(plasticOres, "Plastic Ore");
-		registerBlock(CB, "Camera Block");
-		registerTheItem(C, "Camera +");
+		registerBlock(CB, "Camera");
+		registerTheItem(C, "Tablet");
 		registerTheItem(PlasticIngot, "Plastic Ingot");
 		registerTheItem(SteelIngot, "Steel Ingot");
 		registerTheItem(BPlushie, "Bonnie's Plushie");
@@ -110,7 +138,17 @@ public class FNAFItems {
 		registerTheItem(GPlushie, "Golden Freddy's Plushie");
 		registerTheItem(Knife, "knife");
 		registerTheItem(BGuitar, "Bonnie's Guitar");
-		 	
+		registerTheItem(Pizza, "pizza");
+		registerTheItem(PartyHat1, "partyhat1");
+		registerTheItem(PartyHat2, "partyhat2");
+		registerTheItem(PartyHat3, "partyhat3");
+		registerTheItem(PartyHat4, "partyhat4");
+		registerTheItem(PartyHat5, "partyhat5");
+		registerTheItem(PartyHat6, "partyhat6");
+		registerTheItem(PartyHat7, "partyhat7");
+		registerTheItem(PartyHat8, "partyhat8");
+		registerTheItem(PartyHat9, "partyhatcreeper");
+		
 		
 			BonnieHelmet = new itemBonnie(0);
 			registerArmor(BonnieHelmet, "Bonnie Head");
