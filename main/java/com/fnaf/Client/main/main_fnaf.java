@@ -33,7 +33,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Strings.MODID, name = Strings.name, version = Strings.version, dependencies = "required-after:llibrary@[0.1.0-1.7.10,)")
+@Mod(modid = Strings.MODID, name = Strings.name, version = Strings.version)
 public class main_fnaf
 {
 	public static CreativeTabs tabFnaf3 = new CreativeTabFNAF3("standard3");

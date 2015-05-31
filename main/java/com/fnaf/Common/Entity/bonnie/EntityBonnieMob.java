@@ -33,13 +33,13 @@ public class EntityBonnieMob extends EntityAnimal{
 			return false;
 		}
 		
-	
-	protected void applyEntityAttributes(){
-		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0F);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.15D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
-	}
+		protected void applyEntityAttributes(){
+			super.applyEntityAttributes();
+			this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0F);
+			this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.15D);
+			this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
+		}
+
 
 	
 	//Well shit, My Bonnie has a fucken Dog-thingy!

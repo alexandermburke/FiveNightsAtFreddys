@@ -56,7 +56,8 @@ item.bonnie_torso.name=Bonnie's Chest
 item.bonnie_legs.name=Bonnie's Legs
 item.bonnie_feet.name=Bonnie's Feet
 item.enter_dev_mode.name=Start Dev Console
-
+item.pizza.name=Pizza
+item.partyhat1.name=Party Hat
 
 Tile
 
@@ -65,7 +66,7 @@ tile.lootbox.name=LootBox
 tile.steel_ore.name=Steel Ore
 tile.plastic_ore.name=Plastic Ore
 tile.animatronic_spawner.name=Animatronic Spawner
-tile.camera_block.name=Camera 
+tile.camera.name=Camera 
 
 
 

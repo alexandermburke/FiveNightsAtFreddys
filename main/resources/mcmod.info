@@ -1,16 +1,16 @@
 [
-	{
-		"modid": "fnafvtwo",
-		"name": "Five nights at Freddy's V3 Mod",
-		"description": "",
-		"version": "v2.8PRE_ALPHA_dev",
-		"mcversion": "1.7.0",
-		"url": "http://www.itopside.us",
-		"updateUrl": "http://www.itopside.us/changelog",
-		"authorList": ["T0psid3 (Coder), CuchoTheSpanishman (Modeler), and iLexiconn (LLibrary)"],
-		"credits": "",
-		"logoFile": "LogoFile.png",
-		"screenshots": [],
-		"dependencies": ["llibrary"]
-	}
+{
+  "modid": "fnafvtwo",
+  "name": "Five nights at Freddy's V3 Mod",
+  "description": "",
+  "version": "v2.8PRE_ALPHA_dev",
+  "mcversion": "1.7.0",
+  "url": "http://www.itopside.us",
+  "updateUrl": "http://www.itopside.us/changelog",
+  "authorList": ["T0psid3 (Coder), CuchoTheSpanishman (Modeler), and iLexiconn (LLibrary)"],
+  "credits": "",
+  "logoFile": "LogoFile.png",
+  "screenshots": [],
+  "dependencies": [LLibrary]
+}
 ]

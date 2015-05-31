@@ -10,8 +10,9 @@ import com.fnaf.Common.Blocks.Camera;
 import com.fnaf.Common.Blocks.LootBox;
 import com.fnaf.Common.Blocks.render.RenderCamera;
 import com.fnaf.Common.Blocks.render.RenderLootBox;
-import com.fnaf.Common.Blocks.tileEntity.TileEntityCamera;
-import com.fnaf.Common.Blocks.tileEntity.TileEntityLootBox;
+import com.fnaf.Common.Blocks.tileentity.TileEntityCamera;
+import com.fnaf.Common.Blocks.tileentity.TileEntityCameraRenderer;
+import com.fnaf.Common.Blocks.tileentity.TileEntityLootBox;
 import com.fnaf.Common.Entity.WitheredBonnie.EntityWitheredBonnieMob;
 import com.fnaf.Common.Entity.WitheredBonnie.RenderWitheredBonnie;
 import com.fnaf.Common.Entity.WitheredBonnie.WitheredBonnie;
@@ -58,6 +59,7 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends ServerProxy{
 
+	
 	public void registerRenderThings(){
 		RenderingRegistry.registerEntityRenderingHandler(EntityPuppetMob.class, new RenderPuppetMob(new Puppet(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFreddyMob.class, new RenderFreddyMob(new Freddy(), 0));
@@ -74,6 +76,13 @@ public class ClientProxy extends ServerProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityWitheredBonnieMob.class, new RenderWitheredBonnie(new WitheredBonnie(), 0));
 		
 		
-		
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCamera.class, new TileEntityCameraRenderer());
 	}
+	private static final Bonnie modelBonnie = new Bonnie();
+	
+	public Bonnie getArmorModel(String par1String)
+	{
+		
+			return modelBonnie;
+		}
 }

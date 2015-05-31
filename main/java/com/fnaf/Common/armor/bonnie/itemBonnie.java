@@ -3,6 +3,9 @@ package com.fnaf.Common.armor.bonnie;
 import java.util.List;
 
 import com.fnaf.Client.main.ClientProxy;
+import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.main_fnaf;
+import com.fnaf.Common.Entity.bonnie.Bonnie;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
@@ -32,14 +35,25 @@ public class itemBonnie extends ItemArmor
      * 
      * @return  A ModelBiped to render instead of the default
      */
+    
     @SideOnly(Side.CLIENT)
-    public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot)
-    {
-    	
-    	  return getArmorModel(entityLiving, itemStack, armorSlot);
-    }
-    
-    
+  	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemstack, int armorSlot) 
+  	{
+  		Bonnie armorModel = null;
+
+  		if (itemstack != null)
+  		{
+  			if (itemstack.getItem() instanceof itemBonnie)
+  			{
+  				int type = ((ItemArmor)itemstack.getItem()).armorType;
+
+  				armorModel = main_fnaf.proxy.getArmorModel("bonnie");
+  			}
+  			
+  			
+  		}
+  		return null;
+  	}
  
     
     /**
@@ -57,7 +71,7 @@ public class itemBonnie extends ItemArmor
      */
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        return "fnaf2" + ":textures/models/bonnie.png";
+        return Strings.MODID + ":"  + "textures/models/bonnie.png";
     }
     
     /**
@@ -70,7 +84,7 @@ public class itemBonnie extends ItemArmor
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
     {
     		if(true){
-				if(player instanceof EntityPlayer)((EntityPlayer)player).setHealth(99999);
+				if(player instanceof EntityPlayer)((EntityPlayer)player).setHealth(1);
 				}
 
 			
@@ -82,6 +96,6 @@ public class itemBonnie extends ItemArmor
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean p_77624_4_) 
     {
-    	info.add("Five nights at Freddy's 1 Bonnie.");
+    	info.add("TBT To when this mod was first made! (Hence the skin.)");
     }
 }

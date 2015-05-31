@@ -5,7 +5,7 @@ import static net.minecraftforge.common.util.ForgeDirection.DOWN;
 import com.fnaf.Client.gui.GUIDevMode;
 import com.fnaf.Client.gui.GUILootBox;
 import com.fnaf.Common.Blocks.render.RenderLootBox;
-import com.fnaf.Common.Blocks.tileEntity.TileEntityLootBox;
+import com.fnaf.Common.Blocks.tileentity.TileEntityLootBox;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

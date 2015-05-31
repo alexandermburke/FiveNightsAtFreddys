@@ -18,6 +18,7 @@ import com.fnaf.Common.Blocks.LootBox;
 import com.fnaf.Common.Blocks.SteelOre;
 import com.fnaf.Common.armor.bonnie.itemBonnie;
 import com.fnaf.Common.armor.freddy.itemFreddy;
+import com.fnaf.Common.armor.partyhat.ItemPartyHat;
 import com.fnaf.dev.itemEnterDevMode;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -90,15 +91,15 @@ public class FNAFItems {
 		SteelIngot = new ItemIngot();
 		
 		Pizza = new ItemIngot();
-		PartyHat1 = new ItemPartyHat();
-		PartyHat2 = new ItemPartyHat();
-		PartyHat3 = new ItemPartyHat();
-		PartyHat4 = new ItemPartyHat();
-		PartyHat5 = new ItemPartyHat();
-		PartyHat6 = new ItemPartyHat();
-		PartyHat7 = new ItemPartyHat();
-		PartyHat8 = new ItemPartyHat();
-		PartyHat9 = new ItemPartyHat();
+	//	PartyHat1 = new ItemPartyHatThing();
+	//	PartyHat2 = new ItemPartyHatThing();
+	//	PartyHat3 = new ItemPartyHatThing();
+	//	PartyHat4 = new ItemPartyHatThing();
+	//	PartyHat5 = new ItemPartyHatThing();
+	//	PartyHat6 = new ItemPartyHatThing();
+	//	PartyHat7 = new ItemPartyHatThing();
+	//	PartyHat8 = new ItemPartyHatThing();
+	//	PartyHat9 = new ItemPartyHatThing();
 		
 		/**
 		 * Blocks
@@ -111,7 +112,7 @@ public class FNAFItems {
 		BGuitar = new FoxysHook();
 		FreddysMic = new FoxysHook();
 		
-		CB = new Camera();
+		CB = new Camera(Material.iron, true);
 		SteelOres = new SteelOre();
 		plasticOres = new SteelOre();
 		
@@ -139,17 +140,39 @@ public class FNAFItems {
 		registerTheItem(Knife, "knife");
 		registerTheItem(BGuitar, "Bonnie's Guitar");
 		registerTheItem(Pizza, "pizza");
-		registerTheItem(PartyHat1, "partyhat1");
-		registerTheItem(PartyHat2, "partyhat2");
-		registerTheItem(PartyHat3, "partyhat3");
-		registerTheItem(PartyHat4, "partyhat4");
-		registerTheItem(PartyHat5, "partyhat5");
-		registerTheItem(PartyHat6, "partyhat6");
-		registerTheItem(PartyHat7, "partyhat7");
-		registerTheItem(PartyHat8, "partyhat8");
-		registerTheItem(PartyHat9, "partyhatcreeper");
+
+			
 		
+			/*
+			 * Party Hats
+			 */
+			PartyHat1 = new ItemPartyHat(0);
+			registerArmor(PartyHat1, "partyhat1");
+			
+			PartyHat2 = new ItemPartyHat(0);
+			registerArmor(PartyHat2, "partyhat2");
 		
+			PartyHat3 = new ItemPartyHat(0);
+			registerArmor(PartyHat3, "partyhat3");
+		
+			PartyHat4 = new ItemPartyHat(0);
+			registerArmor(PartyHat4, "partyhat4");
+			
+			PartyHat5 = new ItemPartyHat(0);
+			registerArmor(PartyHat5, "partyhat5");
+			
+			PartyHat6 = new ItemPartyHat(0);
+			registerArmor(PartyHat6, "partyhat6");
+			
+			PartyHat7 = new ItemPartyHat(0);
+			registerArmor(PartyHat7, "partyhat7");
+			
+			PartyHat8 = new ItemPartyHat(0);
+			registerArmor(PartyHat8, "partyhat8");
+			
+			PartyHat9 = new ItemPartyHat(0);
+			registerArmor(PartyHat9, "partyhatcreeper");
+			
 			BonnieHelmet = new itemBonnie(0);
 			registerArmor(BonnieHelmet, "Bonnie Head");
 			
