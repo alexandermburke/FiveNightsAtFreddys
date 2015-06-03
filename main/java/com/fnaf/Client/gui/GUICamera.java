@@ -30,49 +30,62 @@ public class GUICamera extends GuiScreen {
 		this.page = page;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void initGui(){
 		super.initGui();
 				
-		this.buttonList.add(new GuiButton(((page * 5) - 4), 5, this.height - 45, 20, 20, "<"));
+		this.buttonList.add(new GuiButton(((page * 5) - 4), 5, this.height - 45, 20, 20, "Back"));
         
 		int counter = 1;
 		for(int i = ((page * 5) - 3); i <= ((page * 5) + 1); i++){
-			if(i - 2 < cameraMonitor.getCameraPositions(nbtTag).size() && cameraMonitor.getCameraPositions(nbtTag).get(i - 2) != null){
-				this.buttonList.add(new GuiButton(i, -25 + ((counter) * 70), this.height - 45, 60, 20, "Camera #" + (i - 1)));
+				this.buttonList.add(new GuiButton(i, -25 + ((counter) * 70), this.height - 45, 60, 20, "Camera 1A" + (i - 1)));
 			}			
 			counter += 1;
-		}
+		{}
 		
-		this.buttonList.add(new GuiButton(((page * 5) + 2), this.width - 25, this.height - 45, 20, 20, ">"));
+		this.buttonList.add(new GuiButton(((page * 5) + 2), this.width - 25, this.height - 45, 20, 20, "Forward"));
+		fontRendererObj.drawString("Cameras - Still buggy", 40, 5, 0xFFFFFF );
 		
 	}
-    }
-	
+    
     public void onGuiClosed(){
+    	System.out.println("Camera gui Closed.");
     	
+    	
+    	/**
+    	 * Play Tablet closing sound hear
+    	 */
+    	
+    	/**
+    	 * Teleport player back to where X was at.
+    	 * X  Player
+    	 */
     }
 	
+   
+    
 	public void drawScreen(int par1, int par2, float par3){
 		super.drawScreen(par1, par2, par3);
     }
 	
 	protected void actionPerformed(GuiButton guibutton){		
 		
-		if(guibutton.id == ((page * 5) - 4) && page > 1){
-			this.mc.displayGuiScreen(new GUICamera());
+//		if(guibutton.id == ((page * 5) - 4) && page > 1){
+	//		this.mc.displayGuiScreen(new GUICamera());
 		
-		}else if(guibutton.id == ((page * 5) + 2) && cameraMonitor.getCameraPositions(nbtTag).size() > ((page * 5) - 1)){
-			this.mc.displayGuiScreen(new GUICamera());
+	//	}else if(guibutton.id == ((page * 5) + 2) && cameraMonitor.getCameraPositions(nbtTag).size() > ((page * 5) - 1)){
+		//	this.mc.displayGuiScreen(new GUICamera());
 	
-		}else if(guibutton.id > page && guibutton.id <= (page * 6) ){
+//		}else if(guibutton.id > page && guibutton.id <= (page * 6) ){
 		
-		}
+	//	}
 		
 	}
 
 	public boolean doesGuiPauseGame()
     {
         return false;
+        //Leave False for now, havent tested yet
     }
 	
 }
