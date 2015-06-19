@@ -5,9 +5,12 @@ package com.fnaf.Client.main;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.MinecraftForgeClient;
 
+import com.fnaf.Client.main.renderer.CustomModeledBlockRenderer;
 import com.fnaf.Common.Blocks.Camera;
 import com.fnaf.Common.Blocks.LootBox;
+import com.fnaf.Common.Blocks.Models.ModelCamera;
 import com.fnaf.Common.Blocks.render.RenderCamera;
 import com.fnaf.Common.Blocks.render.RenderLootBox;
 import com.fnaf.Common.Blocks.tileentity.TileEntityCamera;
@@ -52,6 +55,7 @@ import com.fnaf.Common.Entity.toychica.ToyChica;
 import com.fnaf.Common.Entity.toyfreddy.EntityToyFreddyMob;
 import com.fnaf.Common.Entity.toyfreddy.RenderToyFreddy;
 import com.fnaf.Common.Entity.toyfreddy.ToyFreddy;
+import com.fnaf.Common.Items.FNAFItems;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
@@ -61,6 +65,7 @@ public class ClientProxy extends ServerProxy{
 
 	
 	public void registerRenderThings(){
+		
 		RenderingRegistry.registerEntityRenderingHandler(EntityPuppetMob.class, new RenderPuppetMob(new Puppet(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFreddyMob.class, new RenderFreddyMob(new Freddy(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBalloonBoyMob.class, new RenderBalloonBoy(new BalloonBoy(), 0));
@@ -76,7 +81,12 @@ public class ClientProxy extends ServerProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityWitheredBonnieMob.class, new RenderWitheredBonnie(new WitheredBonnie(), 0));
 		
 		
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(FNAFItems.CB), new CustomModeledBlockRenderer(new TileEntityCamera(), new ModelCamera(), 0.0D, -0.1D, 0.0D, 0.0F));
+
+		
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCamera.class, new TileEntityCameraRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCamera.class, new TileEntityCameraRenderer());
+
 	}
 	private static final Bonnie modelBonnie = new Bonnie();
 	

@@ -1,15 +1,16 @@
 package com.fnaf.Common.Entity.WitheredBonnie;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
-
 import cpw.mods.fml.common.registry.EntityRegistry;
 
-public class EntityWitheredBonnie {
-	public static void mainRegistry(){
-		registerEntity();
-	}
+public class EntityWitheredBonnie  {
+	
+
+
 	
 	public static void registerEntity(){
 		

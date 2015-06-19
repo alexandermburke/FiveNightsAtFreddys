@@ -13,17 +13,17 @@ import com.fnaf.Client.gui.GUICamera;
 import com.fnaf.Client.gui.GUIDevMode;
 
 public class Tablet extends Item {
+	
 	public Tablet()
 	{
 		
 	}
 	public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player) {
-		Minecraft.getMinecraft().displayGuiScreen(new GUICamera());
-		 System.out.println( "Camera Version: 'v0.0.1' Dev Notes: Unstable, Needs more work. ");
+		Minecraft.getMinecraft().displayGuiScreen(new GUICamera(null, null));
+	//	 System.out.println( "Camera Version: 'v0.0.1' Dev Notes: Unstable, Needs more work. ");
 		return super.onItemRightClick(item, world, player);
 	}
 	public List getCameraPositions(NBTTagCompound nbtTag) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

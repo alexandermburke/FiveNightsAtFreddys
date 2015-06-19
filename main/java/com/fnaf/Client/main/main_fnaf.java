@@ -1,6 +1,9 @@
 package com.fnaf.Client.main;
 
+import java.util.HashMap;
+
 import com.fnaf.Client.handler.ConfigurationHandler;
+import com.fnaf.Client.registry.EntityRegister;
 import com.fnaf.Client.utils.CreativeTabFNAF;
 import com.fnaf.Client.utils.CreativeTabFNAF2;
 import com.fnaf.Client.utils.CreativeTabFNAF3;
@@ -36,7 +39,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Strings.MODID, name = Strings.name, version = Strings.version)
 public class main_fnaf
 {
-	public static CreativeTabs tabFnaf3 = new CreativeTabFNAF3("standard3");
+//	public static CreativeTabs tabFnaf3 = new CreativeTabFNAF3("standard3");
 	public static CreativeTabs tabFnaf2 = new CreativeTabFNAF2("standard2");
 	public static CreativeTabs tabFnaf = new CreativeTabFNAF("standard");
 	public static Configuration Config;
@@ -48,7 +51,7 @@ public class main_fnaf
     
     @Instance(Strings.MODID)
     public static main_fnaf modInstance;
-	
+    public HashMap<String, Object[]> cameraUsePositions = new HashMap<String, Object[]>();
 	public static ConfigurationHandler configHandler = new ConfigurationHandler();
 	
     @EventHandler
@@ -62,7 +65,7 @@ public class main_fnaf
     	
     	MinecraftForge.EVENT_BUS.register(new SpawnEvent());
     	FMLCommonHandler.instance().bus().register(main_fnaf.modInstance);
-    	
+    /*	
     	EntityPuppet.mainRegistry();
     	EntityFreddy.mainRegistry();
     	EntityWitheredBonnie.mainRegistry();
@@ -75,14 +78,45 @@ public class main_fnaf
     	EntityMangle.mainRegistry();
     	EntityToyBonnie.mainRegistry();
     	EntityToyChica.mainRegistry();
-    	EntityToyFreddy.mainRegistry();
+    	EntityToyFreddy.mainRegistry(); */
+    	
+    	EntityRegister.mainRegistry();
     	FNAFItems.mainRegistry();
     	TickHandler.mainregistry();
     	proxy.registerRenderThings();
     	
     	
+    	
+    	
     }
     
+    public static void log(String par1){
+		log(par1, false);
+	}
+    public static boolean debuggingMode;
+	
+
+	public static void log(String par1, boolean isSevereError){
+		if(main_fnaf.debuggingMode){
+			System.out.println(isSevereError ? "{main_fnaf} {" + FMLCommonHandler.instance().getEffectiveSide() + "} {Severe}: " + par1 : "[main_fnaf] [" + FMLCommonHandler.instance().getEffectiveSide() + "] " + par1);
+		}
+	}
+	public Object[] getUsePosition(String playerName) {
+		return cameraUsePositions.get(playerName);
+	}
+
+	public void setUsePosition(String playerName, double x, double y, double z, float yaw, float pitch) {
+		cameraUsePositions.put(playerName, new Object[]{x, y, z, yaw, pitch});
+	}
+	
+	public boolean hasUsePosition(String playerName) {
+		return cameraUsePositions.containsKey(playerName);
+	}
+	
+	public void removeUsePosition(String playerName){
+		cameraUsePositions.remove(playerName);
+	}
+
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
@@ -94,5 +128,7 @@ public class main_fnaf
 	public static String getVersion(){
 		return VERSION;
 	}
+
+	
     
 }

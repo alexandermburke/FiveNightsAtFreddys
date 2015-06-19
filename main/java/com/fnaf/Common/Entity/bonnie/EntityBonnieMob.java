@@ -20,7 +20,8 @@ public class EntityBonnieMob extends EntityAnimal{
 	
 
 		public EntityBonnieMob(World par1World) {
-			super(par1World);
+		//	super(par1World);
+			super(null);
 			this.setSize(10F, 10F);
 			this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, true));
 	        this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
@@ -37,7 +38,7 @@ public class EntityBonnieMob extends EntityAnimal{
 			super.applyEntityAttributes();
 			this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0F);
 			this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.15D);
-			this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
+	//		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 		}
 
 

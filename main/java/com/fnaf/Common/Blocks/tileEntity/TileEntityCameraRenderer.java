@@ -18,7 +18,7 @@ public class TileEntityCameraRenderer extends TileEntitySpecialRenderer {
 
 	public TileEntityCameraRenderer() {
 		this.modelSecurityCamera = new ModelCamera();
-		this.cameraTexture = new ResourceLocation(strings.MODID + ":" + "textures/blocks/models/camera.png");
+		this.cameraTexture = new ResourceLocation("securitycraft:textures/blocks/models/camera.png");
 	}
 
 	@Override
