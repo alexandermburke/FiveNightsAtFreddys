@@ -1,5 +1,7 @@
 package com.fnaf.Common.Entity.WitheredBonnie;
 
+import com.fnaf.Client.main.Strings;
+
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
@@ -7,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderWitheredBonnie extends RenderLiving{
 
-	private static final ResourceLocation mobTextures = new ResourceLocation(com.fnaf.Client.main.Strings.MODID + ":textures/models/WitheredBonnie.png");
+	private static final ResourceLocation mobTextures = new ResourceLocation(Strings.MODID + ":textures/models/WitheredBonnie.png");
 	@SuppressWarnings("unused")
 	private static final String __OBFID = "CL_00000984";
 	

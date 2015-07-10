@@ -1,4 +1,4 @@
-package com.fnaf.Client.utility;
+package com.fnaf.Client.utils;
 
 import com.fnaf.Client.main.Strings;
 

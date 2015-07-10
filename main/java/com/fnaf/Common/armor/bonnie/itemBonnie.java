@@ -11,6 +11,7 @@ import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
@@ -21,9 +22,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class itemBonnie extends ItemArmor
 {
 	
-	public itemBonnie(int armourType)
-	{
-		super(ArmorMaterial.DIAMOND, 4, armourType); //TODO custom material
+	public itemBonnie(ArmorMaterial material, int render_idx, int type) {
+		super(material, render_idx, type);
+		
+		this.setMaxStackSize(1);
 	}
 	
     /**
@@ -36,44 +38,66 @@ public class itemBonnie extends ItemArmor
      * @return  A ModelBiped to render instead of the default
      */
     
-    @SideOnly(Side.CLIENT)
-  	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemstack, int armorSlot) 
-  	{
-  		Bonnie armorModel = null;
+	@Override
+	@SideOnly(Side.CLIENT)
+	public ModelBiped getArmorModel (EntityLivingBase entityLiving, ItemStack itemstack, int armorSlot){
+		
+		ModelBiped armorModel = ClientProxy.armorModels.get(this);
+		
+		if(armorModel != null){
+    		armorModel.bipedHead.showModel = armorSlot == 0;
+    		armorModel.bipedHeadwear.showModel = false;
+    		armorModel.bipedBody.showModel = armorSlot == 1 || armorSlot == 2;
+    		armorModel.bipedRightArm.showModel = armorSlot == 1;
+    		armorModel.bipedLeftArm.showModel = armorSlot == 1;
+    		armorModel.bipedRightLeg.showModel = armorSlot == 2 || armorSlot == 3;
+    		armorModel.bipedLeftLeg.showModel = armorSlot == 2 || armorSlot == 3;
+    		
+    		armorModel.isSneak = entityLiving.isSneaking();
+    		armorModel.isRiding = entityLiving.isRiding();
+    		armorModel.isChild = entityLiving.isChild();
+    		
+    		armorModel.heldItemRight = 0;
+    		armorModel.aimedBow = false;
+    		
+    		EntityPlayer player = (EntityPlayer)entityLiving;
+    		
+    		ItemStack held_item = player.getEquipmentInSlot(0);
+    		
+    		if (held_item != null){
+    			armorModel.heldItemRight = 1;
+    			
+    			if (player.getItemInUseCount() > 0){
+    				
+    				EnumAction enumaction = held_item.getItemUseAction();
+    				
+    				if (enumaction == EnumAction.bow){
+    					armorModel.aimedBow = true;
+    				}else if (enumaction == EnumAction.block){
+    					armorModel.heldItemRight = 3;
+    				}
+    				
+    				
+    			}
+    			
+    		}
+    		
+    		
+		}
+		
+		
+		return armorModel;
+	}
+	
+	@Override
+	 public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
+	    {
+	        return Strings.MODID + ":"  + "textures/models/bonnie.png";
+	    }
+	    
+	
+	
 
-  		if (itemstack != null)
-  		{
-  			if (itemstack.getItem() instanceof itemBonnie)
-  			{
-  				int type = ((ItemArmor)itemstack.getItem()).armorType;
-
-  				armorModel = main_fnaf.proxy.getArmorModel("bonnie");
-  			}
-  			
-  			
-  		}
-  		return null;
-  	}
- 
-    
-    /**
-     * Called by RenderBiped and RenderPlayer to determine the armor texture that 
-     * should be use for the currently equiped item.
-     * This will only be called on instances of ItemArmor. 
-     * 
-     * Returning null from this function will use the default value.
-     * 
-     * @param stack ItemStack for the equpt armor
-     * @param entity The entity wearing the armor
-     * @param slot The slot the armor is in
-     * @param type The subtype, can be null or "overlay"
-     * @return Path of texture to bind, or null to use default
-     */
-    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
-    {
-        return Strings.MODID + ":"  + "textures/models/bonnie.png";
-    }
-    
     /**
      * Called to tick armor in the armor slot. Override to do something
      *

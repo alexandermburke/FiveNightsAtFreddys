@@ -10,13 +10,14 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 public class EntityWitheredBonnie  {
 	
 
-
+/*
 	
 	public static void registerEntity(){
 		
 		createEntity(EntityWitheredBonnieMob.class, "Withered Bonnie", 0x525023, 0xEBEBEB);
 		
 	}
+	*/
 	//Sounds
 	protected String getLivingSound()
 	{

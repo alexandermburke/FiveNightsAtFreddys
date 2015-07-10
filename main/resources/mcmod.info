@@ -3,7 +3,8 @@
   "modid": "fnafvtwo",
   "name": "Five nights at Freddy's V3 Mod",
   "description": "",
-  "version": "v2.8PRE_ALPHA_dev",
+  "version": "v3.3",
+  "beta": "false",
   "mcversion": "1.7.0",
   "url": "http://www.itopside.us",
   "updateUrl": "http://www.itopside.us/changelog",
@@ -11,6 +12,7 @@
   "credits": "",
   "logoFile": "LogoFile.png",
   "screenshots": [],
-  "dependencies": [LLibrary]
+  "dependencies": [LLibrary],
+  "Config": ["true"]
 }
 ]

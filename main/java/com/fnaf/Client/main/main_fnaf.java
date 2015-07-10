@@ -1,12 +1,16 @@
 package com.fnaf.Client.main;
 
+import ibxm.Player;
+
 import java.util.HashMap;
 
+import com.fnaf.Client.commands.Commands;
+import com.fnaf.Client.event.Events;
+import com.fnaf.Client.gui.GUIOverlayDev;
 import com.fnaf.Client.handler.ConfigurationHandler;
 import com.fnaf.Client.registry.EntityRegister;
 import com.fnaf.Client.utils.CreativeTabFNAF;
 import com.fnaf.Client.utils.CreativeTabFNAF2;
-import com.fnaf.Client.utils.CreativeTabFNAF3;
 import com.fnaf.Client.utils.SpawnEvent;
 import com.fnaf.Common.Blocks.LootBox;
 import com.fnaf.Common.Entity.WitheredBonnie.EntityWitheredBonnie;
@@ -25,8 +29,11 @@ import com.fnaf.Common.Entity.toyfreddy.EntityToyFreddy;
 import com.fnaf.Common.Items.FNAFItems;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -35,60 +42,71 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = Strings.MODID, name = Strings.name, version = Strings.version)
+@Mod(modid = Strings.MODID, name = Strings.name, version = Strings.version /* dependencies = "required-after:llibrary@[0.1.0-1.7.10,)", */)
 public class main_fnaf
 {
-//	public static CreativeTabs tabFnaf3 = new CreativeTabFNAF3("standard3");
 	public static CreativeTabs tabFnaf2 = new CreativeTabFNAF2("standard2");
 	public static CreativeTabs tabFnaf = new CreativeTabFNAF("standard");
 	public static Configuration Config;
 	
-	public static Configuration configFile;	
+	public static ConfigurationHandler configFile = new ConfigurationHandler();	
 	
-	@SidedProxy(clientSide = "com.fnaf.Client.main.ClientProxy", serverSide = "com.fnaf.Client.main.ServerProxy")
-	public static ServerProxy proxy;
+	@SidedProxy(clientSide = "com.fnaf.Client.main.ClientProxy", serverSide = "com.fnaf.Client.main.CommonProxy")
+	public static CommonProxy proxy;
+	
     
     @Instance(Strings.MODID)
     public static main_fnaf modInstance;
     public HashMap<String, Object[]> cameraUsePositions = new HashMap<String, Object[]>();
-	public static ConfigurationHandler configHandler = new ConfigurationHandler();
+    public static ConfigurationHandler config = new ConfigurationHandler();
 	
     @EventHandler
 	public void postInit(FMLPostInitializationEvent event){
-		MinecraftForge.EVENT_BUS.register(main_fnaf.configHandler);
+		System.out.println("Config File Succesfully Loaded and Named: " + Strings.MODID + ".cfg");
+		configFile.load(config);
+        if(configFile.hasChanged())
+        {
+            configFile.save();
+            System.out.println("Config File Successfully Saved to .minecraft/config/" + Strings.MODID + ".cfg");
+        }
+
+        MinecraftForge.EVENT_BUS.register(new Events());
+    	FMLCommonHandler.instance().bus().register(new Events());
+    	
 	}
-    
+    @EventHandler
+	public void onServerStarting(FMLServerStartingEvent event)
+	{
+    	Commands.init(event);
+    	
+	}
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent PreEvent)
     {
     	
+    	
+    	
+    	
+    	System.out.println("Details:" + Strings.MODID + ", " + Strings.version + ", " + Strings.beta);
+    	
+    	
+    	/* Turn GUIOverlayDev off when publishing the mod.*/
+//    	GUIOverlayDev.load();
+   
+    	
     	MinecraftForge.EVENT_BUS.register(new SpawnEvent());
     	FMLCommonHandler.instance().bus().register(main_fnaf.modInstance);
-    /*	
-    	EntityPuppet.mainRegistry();
-    	EntityFreddy.mainRegistry();
-    	EntityWitheredBonnie.mainRegistry();
-    	EntityBalloonBoy.mainRegistry();
-    	EntitySpringtrap.mainRegistry();
-    	EntityChica.mainRegistry();
-    	EntityFoxy.mainRegistry();
-    	EntityGoldenFreddy.mainRegistry();
-    	EntityBonnie.mainRegistry();
-    	EntityMangle.mainRegistry();
-    	EntityToyBonnie.mainRegistry();
-    	EntityToyChica.mainRegistry();
-    	EntityToyFreddy.mainRegistry(); */
-    	
-    	EntityRegister.mainRegistry();
+       	EntityRegister.mainRegistry();
     	FNAFItems.mainRegistry();
     	TickHandler.mainregistry();
     	proxy.registerRenderThings();
     	
     	
-    	
-    	
-    }
+    	System.out.println("Items, Entitys, and Blocks Loaded for:" + Strings.version + ", " + Strings.MODID );
+    	 }
     
     public static void log(String par1){
 		log(par1, false);

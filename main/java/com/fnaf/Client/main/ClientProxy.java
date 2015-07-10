@@ -2,23 +2,47 @@ package com.fnaf.Client.main;
 
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.common.MinecraftForge;
 
+import com.fnaf.Client.event.Events;
 import com.fnaf.Client.main.renderer.CustomModeledBlockRenderer;
 import com.fnaf.Common.Blocks.Camera;
 import com.fnaf.Common.Blocks.LootBox;
 import com.fnaf.Common.Blocks.Models.ModelCamera;
+import com.fnaf.Common.Blocks.render.RenderBox;
 import com.fnaf.Common.Blocks.render.RenderCamera;
 import com.fnaf.Common.Blocks.render.RenderLootBox;
+import com.fnaf.Common.Blocks.tileentity.TileEntityBox;
 import com.fnaf.Common.Blocks.tileentity.TileEntityCamera;
 import com.fnaf.Common.Blocks.tileentity.TileEntityCameraRenderer;
 import com.fnaf.Common.Blocks.tileentity.TileEntityLootBox;
+import com.fnaf.Common.Entity.Camera.EntityCameraMob;
+import com.fnaf.Common.Entity.Camera.RenderTheCamera;
+import com.fnaf.Common.Entity.Phantom.bb.EntityPhantomBalloonBoyMob;
+import com.fnaf.Common.Entity.Phantom.bb.PhantomBalloonBoy;
+import com.fnaf.Common.Entity.Phantom.bb.RenderPhantomBalloonBoy;
+import com.fnaf.Common.Entity.Phantom.chica.EntityPhantomChicaMob;
+import com.fnaf.Common.Entity.Phantom.chica.PhantomChica;
+import com.fnaf.Common.Entity.Phantom.chica.RenderPhantomChica;
+import com.fnaf.Common.Entity.Phantom.foxy.EntityPhantomFoxy;
+import com.fnaf.Common.Entity.Phantom.foxy.EntityPhantomFoxyMob;
+import com.fnaf.Common.Entity.Phantom.foxy.PhantomFoxy;
+import com.fnaf.Common.Entity.Phantom.foxy.RenderPhantomFoxy;
+import com.fnaf.Common.Entity.Phantom.mangle.EntityPhantomMangleMob;
+import com.fnaf.Common.Entity.Phantom.mangle.PhantomMangle;
+import com.fnaf.Common.Entity.Phantom.mangle.RenderPhantomMangle;
 import com.fnaf.Common.Entity.WitheredBonnie.EntityWitheredBonnieMob;
 import com.fnaf.Common.Entity.WitheredBonnie.RenderWitheredBonnie;
 import com.fnaf.Common.Entity.WitheredBonnie.WitheredBonnie;
+import com.fnaf.Common.Entity.WitheredChica.EntityWitheredChicaMob;
+import com.fnaf.Common.Entity.WitheredChica.RenderWitheredChica;
 import com.fnaf.Common.Entity.balloonboy.BalloonBoy;
 import com.fnaf.Common.Entity.balloonboy.EntityBalloonBoyMob;
 import com.fnaf.Common.Entity.balloonboy.RenderBalloonBoy;
@@ -28,6 +52,9 @@ import com.fnaf.Common.Entity.bonnie.RenderBonnie;
 import com.fnaf.Common.Entity.chica.Chica;
 import com.fnaf.Common.Entity.chica.EntityChicaMob;
 import com.fnaf.Common.Entity.chica.RenderChica;
+import com.fnaf.Common.Entity.fnati.NM.EntityNegativeMickeyMob;
+import com.fnaf.Common.Entity.fnati.NM.NegativeMickey;
+import com.fnaf.Common.Entity.fnati.NM.RenderNegativeMickey;
 import com.fnaf.Common.Entity.foxy.EntityFoxyMob;
 import com.fnaf.Common.Entity.foxy.Foxy;
 import com.fnaf.Common.Entity.foxy.RenderFoxy;
@@ -56,15 +83,26 @@ import com.fnaf.Common.Entity.toyfreddy.EntityToyFreddyMob;
 import com.fnaf.Common.Entity.toyfreddy.RenderToyFreddy;
 import com.fnaf.Common.Entity.toyfreddy.ToyFreddy;
 import com.fnaf.Common.Items.FNAFItems;
+import com.fnaf.Common.Entity.WitheredChica.WitheredChica;
+import com.fnaf.Common.Entity.WitheredFoxy.EntityWitheredFoxyMob;
+import com.fnaf.Common.Entity.WitheredFoxy.RenderWitheredFoxy;
+import com.fnaf.Common.Entity.WitheredFoxy.WitheredFoxy;
+import com.fnaf.Common.Entity.WitheredFreddy.EntityWitheredFreddyMob;
+import com.fnaf.Common.Entity.WitheredFreddy.RenderWitheredFreddy;
+import com.fnaf.Common.Entity.WitheredFreddy.WitheredFreddy;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
+import cpw.mods.fml.common.FMLCommonHandler;
 
-public class ClientProxy extends ServerProxy{
+public class ClientProxy extends CommonProxy{
 
 	
 	public void registerRenderThings(){
+		
+		
+		
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityPuppetMob.class, new RenderPuppetMob(new Puppet(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFreddyMob.class, new RenderFreddyMob(new Freddy(), 0));
@@ -79,14 +117,31 @@ public class ClientProxy extends ServerProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityToyBonnieMob.class, new RenderToyBonnie(new ToyBonnie(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityToyChicaMob.class, new RenderToyChica(new ToyChica(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityWitheredBonnieMob.class, new RenderWitheredBonnie(new WitheredBonnie(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(EntityWitheredChicaMob.class, new RenderWitheredChica(new WitheredChica(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(EntityWitheredFoxyMob.class, new RenderWitheredFoxy(new WitheredFoxy(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(EntityWitheredFreddyMob.class, new RenderWitheredFreddy(new WitheredFreddy(), 0));
+
+		RenderingRegistry.registerEntityRenderingHandler(EntityCameraMob.class, new RenderTheCamera(new ModelCamera(), 0));
+
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityPhantomBalloonBoyMob.class, new RenderPhantomBalloonBoy(new PhantomBalloonBoy(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(EntityPhantomChicaMob.class, new RenderPhantomChica(new PhantomChica(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(EntityPhantomMangleMob.class, new RenderPhantomMangle(new PhantomMangle(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(EntityPhantomFoxyMob.class, new RenderPhantomFoxy(new PhantomFoxy(), 0));
+		
+
+		
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityNegativeMickeyMob.class, new RenderNegativeMickey(new NegativeMickey(), 0));
 		
 		
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(FNAFItems.CB), new CustomModeledBlockRenderer(new TileEntityCamera(), new ModelCamera(), 0.0D, -0.1D, 0.0D, 0.0F));
 
 		
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCamera.class, new TileEntityCameraRenderer());
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCamera.class, new TileEntityCameraRenderer());
-
+	//	ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCamera.class, new TileEntityCameraRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBox.class, new RenderBox());
+		
 	}
 	private static final Bonnie modelBonnie = new Bonnie();
 	
@@ -95,4 +150,12 @@ public class ClientProxy extends ServerProxy{
 		
 			return modelBonnie;
 		}
+
+public static final Map<Item, ModelBiped> armorModels = new HashMap<Item, ModelBiped>();
+	
+	public static void register_renderers(){
+		
+	
+	}
+
 }

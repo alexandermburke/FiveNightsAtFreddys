@@ -1,9 +1,12 @@
 package com.fnaf.Common.Items;
 
 import net.minecraft.block.Block;
+
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 
 import com.fnaf.Client.Items.Plushies.itemBalloonBoysPlushie;
 import com.fnaf.Client.Items.Plushies.itemBonniesPlushie;
@@ -40,7 +43,7 @@ public class FNAFItems {
 	public static Item PartyHat7;
 	public static Item PartyHat8;
 	public static Item PartyHat9;
-	public static Item FreddyHelmet;
+	public static ItemStack FreddyHelmet;
     public static Item BonnieHelmet;
     public static Item BonnieChestplate;
     public static Item BonnieLeggings;
@@ -141,48 +144,27 @@ public class FNAFItems {
 		registerTheItem(BGuitar, "Bonnie's Guitar");
 		registerTheItem(Pizza, "pizza");
 
+
 			
 		
 			/*
 			 * Party Hats
 			 */
-			PartyHat1 = new ItemPartyHat(0);
-			registerArmor(PartyHat1, "partyhat1");
-			
-			PartyHat2 = new ItemPartyHat(0);
-			registerArmor(PartyHat2, "partyhat2");
-		
-			PartyHat3 = new ItemPartyHat(0);
-			registerArmor(PartyHat3, "partyhat3");
-		
-			PartyHat4 = new ItemPartyHat(0);
-			registerArmor(PartyHat4, "partyhat4");
-			
-			PartyHat5 = new ItemPartyHat(0);
-			registerArmor(PartyHat5, "partyhat5");
-			
-			PartyHat6 = new ItemPartyHat(0);
-			registerArmor(PartyHat6, "partyhat6");
-			
-			PartyHat7 = new ItemPartyHat(0);
-			registerArmor(PartyHat7, "partyhat7");
-			
-			PartyHat8 = new ItemPartyHat(0);
-			registerArmor(PartyHat8, "partyhat8");
-			
-			PartyHat9 = new ItemPartyHat(0);
-			registerArmor(PartyHat9, "partyhatcreeper");
-			
-			BonnieHelmet = new itemBonnie(0);
+
+    	
+    	
+		ArmorMaterial Useless = EnumHelper.addArmorMaterial("useless", 0, new int[]{0, 0, 0, 0}, 0);
+    	
+			BonnieHelmet = new itemBonnie(Useless, 0, 0);
 			registerArmor(BonnieHelmet, "Bonnie Head");
 			
-			BonnieChestplate = new itemBonnie(1);
+			BonnieChestplate = new itemBonnie(Useless, 1, 0);
 			registerArmor(BonnieChestplate, "Bonnie Torso");
 	        
-			BonnieLeggings = new itemBonnie(2);
+			BonnieLeggings = new itemBonnie(Useless, 2, 0);
 			registerArmor(BonnieLeggings, "Bonnie Legs");
 	        
-	    	BonnieBoots = new itemBonnie(3);
+	    	BonnieBoots = new itemBonnie(Useless, 3, 0);
 	    	registerArmor(BonnieBoots, "Bonnie Feet");
 	
 			FreddysMask = new itemFreddy(0);

@@ -36,7 +36,8 @@ public class Worldgenfnaf2 implements IWorldGenerator
 	{
 		generateOre(3, FNAFItems.plasticOres, 5, 8, world, random, chunkX, chunkZ);
 		generateOre(6, FNAFItems.SteelOres, 6, 40, world, random, chunkX, chunkZ);
-		generateOre(100, FNAFItems.Loot, 100, 100, world, random, chunkX, chunkZ);
+	//	generateOre(100, FNAFItems.Loot, 100, 100, world, random, chunkX, chunkZ);
+	//	generateOre(100, FNAFItems., 100, 100, world, random, chunkX, chunkZ);
 	}
 	
 	public void generateNether(World world, Random random, int chunkX, int chunkZ)

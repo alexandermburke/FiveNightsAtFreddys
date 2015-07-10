@@ -9,7 +9,6 @@ import com.fnaf.Client.gui.GUIMask;
 import com.fnaf.Client.main.Strings;
 import com.fnaf.Client.main.main_fnaf;
 
-import net.ilexiconn.llibrary.client.gui.GuiChangelog;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.model.ModelBiped;
