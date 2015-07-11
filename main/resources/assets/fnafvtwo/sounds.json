@@ -1,0 +1,8 @@
+{
+"walking": {"category": "master","sounds": [{"name": "walking","stream": false}]},
+"deathscream": {"category": "master","sounds": [{"name": "deathscream","stream": false}]},
+"goldenfreddyscream": {"category": "master","sounds": [{"name": "goldenfreddyscream","stream": false}]},
+"manglestatic": {"category": "master","sounds": [{"name": "manglestatic","stream": false}]},
+"bbliving": {"category": "master","sounds": [{"name": "bbliving","stream": false}]},
+"startphonecall": {"category": "master","sounds": [{"name": "startphonecall","stream": false}]}
+}

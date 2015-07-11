@@ -9,6 +9,8 @@ public class Commands {
 		 * Force Faction commands
 		 */
 		event.registerServerCommand(new Commandrekt());
+		event.registerServerCommand(new CommandDisableJumpscares());
+		event.registerServerCommand(new CommandEnableJumpscares());
 		
 	}
 }

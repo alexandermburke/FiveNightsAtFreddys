@@ -28,6 +28,7 @@ import com.fnaf.Common.Entity.toychica.EntityToyChica;
 import com.fnaf.Common.Entity.toyfreddy.EntityToyFreddy;
 import com.fnaf.Common.Items.FNAFItems;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
@@ -45,9 +46,62 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = Strings.MODID, name = Strings.name, version = Strings.version /* dependencies = "required-after:llibrary@[0.1.0-1.7.10,)", */)
+@Mod(modid = Strings.MODID, name = Strings.name, version = Strings.version)
 public class main_fnaf
 {
+	public static enum GameMode
+    {
+        DONOTRUN, NORMAL, CREATIVE, HARDCORE;
+
+		public static void CREATIVE() {
+		
+			Minecraft.getMinecraft().thePlayer.capabilities.isCreativeMode = true;
+			
+		}
+    }
+    public static GameMode gameMode = null;
+
+    public static int getGameModeNumber()
+    {
+        if (gameMode == GameMode.DONOTRUN)
+        {
+            return -1;
+        }
+        else if (gameMode == GameMode.NORMAL)
+        {
+            return 0;
+        }
+        else if (gameMode == GameMode.CREATIVE)
+        {
+            return 1;
+        }
+        else if (gameMode == GameMode.HARDCORE)
+        {
+            return 2;
+        }
+
+        return 0;
+    }
+    public static void setGameModeFromNumber(int gm)
+    {
+        if (gm == -1)
+        {
+            gameMode = GameMode.DONOTRUN;
+        }
+        else if (gm == 0)
+        {
+            gameMode = GameMode.NORMAL;
+        }
+        else if (gm == 1)
+        {
+            gameMode = GameMode.CREATIVE;
+        }
+        else if (gm == 2)
+        {
+            gameMode = GameMode.HARDCORE;
+        }
+    }
+
 	public static CreativeTabs tabFnaf2 = new CreativeTabFNAF2("standard2");
 	public static CreativeTabs tabFnaf = new CreativeTabFNAF("standard");
 	public static Configuration Config;
@@ -93,15 +147,19 @@ public class main_fnaf
     	System.out.println("Details:" + Strings.MODID + ", " + Strings.version + ", " + Strings.beta);
     	
     	
-    	/* Turn GUIOverlayDev off when publishing the mod.*/
-//    	GUIOverlayDev.load();
+    	GUIOverlayDev.load();
    
     	
     	MinecraftForge.EVENT_BUS.register(new SpawnEvent());
+    	
     	FMLCommonHandler.instance().bus().register(main_fnaf.modInstance);
-       	EntityRegister.mainRegistry();
-    	FNAFItems.mainRegistry();
+       	
+    	EntityRegister.mainRegistry();
+    	
+       	FNAFItems.mainRegistry();
+    	
     	TickHandler.mainregistry();
+    	
     	proxy.registerRenderThings();
     	
     	

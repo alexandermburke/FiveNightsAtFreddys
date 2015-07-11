@@ -20,7 +20,7 @@ public class Tablet extends Item {
 	}
 	public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player) {
 		Minecraft.getMinecraft().displayGuiScreen(new GUICamera(null, null));
-	//	 System.out.println( "Camera Version: 'v0.0.1' Dev Notes: Unstable, Needs more work. ");
+	
 		return super.onItemRightClick(item, world, player);
 	}
 	public List getCameraPositions(NBTTagCompound nbtTag) {
