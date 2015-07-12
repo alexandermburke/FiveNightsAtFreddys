@@ -7,7 +7,7 @@ import net.minecraft.util.ChatComponentText;
 
 import org.lwjgl.input.Mouse;
 
-import com.fnaf.Client.main.main_fnaf.GameMode;
+import com.fnaf.Common.main.main_fnaf.GameMode;
 
 public class GUIRunMod extends GuiScreen
 {

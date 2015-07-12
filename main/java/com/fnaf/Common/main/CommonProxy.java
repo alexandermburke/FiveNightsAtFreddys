@@ -1,4 +1,4 @@
-package com.fnaf.Client.main;
+package com.fnaf.Common.main;
 
 import net.minecraftforge.common.MinecraftForge;
 

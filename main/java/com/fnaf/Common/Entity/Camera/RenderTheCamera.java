@@ -9,7 +9,7 @@ import com.fnaf.Common.Entity.toybonnie.EntityToyBonnieMob;
 
 public class RenderTheCamera extends RenderLiving{
 
-	private static final ResourceLocation mobTextures = new ResourceLocation(com.fnaf.Client.main.Reference.MODID + ":textures/models/camera.png");
+	private static final ResourceLocation mobTextures = new ResourceLocation(com.fnaf.Common.main.Reference.MODID + ":textures/models/camera.png");
 	private static final String __OBFID = "CL_00000984";
 	
 	public RenderTheCamera(ModelBase par1ModelBase, float par2) {

@@ -12,8 +12,6 @@ import com.fnaf.Client.Items.Plushies.itemBonniesPlushie;
 import com.fnaf.Client.Items.Plushies.itemChicasPlushie;
 import com.fnaf.Client.Items.Plushies.itemFoxysPlushie;
 import com.fnaf.Client.Items.Plushies.itemFreddysPlushie;
-import com.fnaf.Client.main.Reference;
-import com.fnaf.Client.main.main_fnaf;
 import com.fnaf.Common.Blocks.AnimatronicSpawner;
 import com.fnaf.Common.Blocks.Box;
 import com.fnaf.Common.Blocks.Camera;
@@ -24,6 +22,8 @@ import com.fnaf.Common.Blocks.tileentity.TileEntityBox;
 import com.fnaf.Common.armor.bonnie.itemBonnie;
 import com.fnaf.Common.armor.freddy.itemFreddy;
 import com.fnaf.Common.armor.partyhat.ItemPartyHat;
+import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.main.main_fnaf;
 import com.fnaf.dev.itemEnterDevMode;
 
 import cpw.mods.fml.client.registry.ClientRegistry;

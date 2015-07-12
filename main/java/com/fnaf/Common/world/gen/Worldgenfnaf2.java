@@ -1,4 +1,4 @@
-package com.fnaf.Client.world.gen;
+package com.fnaf.Common.world.gen;
 
 import java.util.Random;
 

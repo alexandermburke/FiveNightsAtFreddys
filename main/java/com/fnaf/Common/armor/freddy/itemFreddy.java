@@ -6,8 +6,8 @@ import org.lwjgl.opengl.GL11;
 
 import com.fnaf.Client.gui.GUIDevMode;
 import com.fnaf.Client.gui.GUIMask;
-import com.fnaf.Client.main.Reference;
-import com.fnaf.Client.main.main_fnaf;
+import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.main.main_fnaf;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;

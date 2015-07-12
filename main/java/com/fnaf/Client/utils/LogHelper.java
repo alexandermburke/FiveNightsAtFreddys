@@ -1,6 +1,6 @@
 package com.fnaf.Client.utils;
 
-import com.fnaf.Client.main.Reference;
+import com.fnaf.Common.main.Reference;
 
 import cpw.mods.fml.common.FMLLog;
 

@@ -1,4 +1,4 @@
-package com.fnaf.Client.main;
+package com.fnaf.Common.main;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;

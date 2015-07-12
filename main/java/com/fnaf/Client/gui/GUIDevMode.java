@@ -1,6 +1,6 @@
 package com.fnaf.Client.gui;
 
-import com.fnaf.Client.main.Reference;
+import com.fnaf.Common.main.Reference;
 
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;

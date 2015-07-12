@@ -1,11 +1,10 @@
-package com.fnaf.Client.main;
+package com.fnaf.Common.main;
 
 import java.util.HashMap;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 
@@ -30,7 +29,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 @Mod(modid = Reference.MODID, name = Reference.name, version = Reference.version)
 public class main_fnaf 
@@ -94,7 +92,7 @@ public class main_fnaf
 	
 	public static ConfigurationHandler configFile = new ConfigurationHandler();	
 	
-	@SidedProxy(clientSide = "com.fnaf.Client.main.ClientProxy", serverSide = "com.fnaf.Client.main.CommonProxy")
+	@SidedProxy(clientSide = "com.fnaf.Common.main.ClientProxy", serverSide = "com.fnaf.Common.main.CommonProxy")
 	public static CommonProxy proxy;
 	
     
@@ -118,20 +116,7 @@ public class main_fnaf
     	
 	}
 
-    GuiMainMenuFNAF Override = new GuiMainMenuFNAF();
-	Minecraft mc = Minecraft.getMinecraft();
-    
-		@SubscribeEvent
-    	public void MainMenuOverride(GuiOpenEvent event) {
-		
-	        if (mc.currentScreen instanceof GuiMainMenu) {
-	        	
-	        	 GuiHelper.addOverride(GuiMainMenu.class, new GuiMainMenuFNAF());
-			
-	        }
-			
-	}
-	
+  
 	
     
     
@@ -144,7 +129,9 @@ public class main_fnaf
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent PreEvent)
     {
-    	
+     	 GuiHelper.addOverride(GuiMainMenu.class, new GuiMainMenuFNAF());
+			
+
 
         MinecraftForge.EVENT_BUS.register(new Events());
     	FMLCommonHandler.instance().bus().register(new Events());

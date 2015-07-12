@@ -1,7 +1,7 @@
 package com.fnaf.Common.armor.bonnie;
 
-import com.fnaf.Client.main.Reference;
-import com.fnaf.Client.main.main_fnaf;
+import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.main.main_fnaf;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;

@@ -6,9 +6,9 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.Blocks.Models.ModelCamera;
 import com.fnaf.Common.Blocks.Models.ModelLootBox;
+import com.fnaf.Common.main.Reference;
 
 public class RenderCamera extends TileEntitySpecialRenderer{
 

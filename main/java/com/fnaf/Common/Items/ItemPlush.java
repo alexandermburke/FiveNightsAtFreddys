@@ -1,6 +1,6 @@
 package com.fnaf.Common.Items;
  
-import com.fnaf.Client.main.main_fnaf;
+import com.fnaf.Common.main.main_fnaf;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;

@@ -2,8 +2,8 @@ package com.fnaf.Common.armor.partyhat;
 
 import java.util.List;
 
-import com.fnaf.Client.main.ClientProxy;
-import com.fnaf.Client.main.Reference;
+import com.fnaf.Common.main.ClientProxy;
+import com.fnaf.Common.main.Reference;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;

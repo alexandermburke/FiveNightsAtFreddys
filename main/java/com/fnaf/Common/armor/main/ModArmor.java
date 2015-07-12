@@ -1,7 +1,7 @@
 package com.fnaf.Common.armor.main;
 
-import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.armor.bonnie.itemBonnie;
+import com.fnaf.Common.main.Reference;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;

@@ -14,7 +14,7 @@ import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.opengl.GL11;
 
 import com.fnaf.Client.gui.GUIOverlayDev.Render;
-import com.fnaf.Client.main.Reference;
+import com.fnaf.Common.main.Reference;
 
 public class GUIBonnieJumpscare extends GuiScreen {
 	

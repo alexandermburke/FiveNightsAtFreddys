@@ -7,7 +7,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderToyBonnie extends RenderLiving{
 
-	private static final ResourceLocation mobTextures = new ResourceLocation(com.fnaf.Client.main.Reference.MODID + ":textures/models/toybonnie.png");
+	private static final ResourceLocation mobTextures = new ResourceLocation(com.fnaf.Common.main.Reference.MODID + ":textures/models/toybonnie.png");
 	private static final String __OBFID = "CL_00000984";
 	
 	public RenderToyBonnie(ModelBase par1ModelBase, float par2) {

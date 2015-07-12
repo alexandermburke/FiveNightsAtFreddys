@@ -2,9 +2,9 @@ package com.fnaf.Common.Blocks.render;
 
 import org.lwjgl.opengl.GL11;
 
-import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.Blocks.Models.ModelCamera;
 import com.fnaf.Common.Blocks.Models.ModelFNAF3Box;
+import com.fnaf.Common.main.Reference;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;

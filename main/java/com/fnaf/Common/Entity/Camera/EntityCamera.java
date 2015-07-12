@@ -2,12 +2,12 @@ package com.fnaf.Common.Entity.Camera;
 
 import org.lwjgl.input.Mouse;
 
-import com.fnaf.Client.main.main_fnaf;
 import com.fnaf.Client.utils.Utils;
 import com.fnaf.Client.utils.Utils.ClientUtils;
 import com.fnaf.Common.Blocks.Camera;
 import com.fnaf.Common.Items.FNAFItems;
 import com.fnaf.Common.Items.Tablet;
+import com.fnaf.Common.main.main_fnaf;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;

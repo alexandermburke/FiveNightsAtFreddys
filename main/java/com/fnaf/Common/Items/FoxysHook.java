@@ -1,7 +1,7 @@
 package com.fnaf.Common.Items;
 
-import com.fnaf.Client.main.main_fnaf;
 import com.fnaf.Common.Entity.balloonboy.EntityBalloonBoyMob;
+import com.fnaf.Common.main.main_fnaf;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;

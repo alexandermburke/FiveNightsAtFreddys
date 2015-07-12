@@ -5,9 +5,9 @@ import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
-import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.Entity.Phantom.foxy.EntityPhantomFoxy;
 import com.fnaf.Common.Entity.Phantom.foxy.EntityPhantomFoxyMob;
+import com.fnaf.Common.main.Reference;
 
 public class RenderNegativeMickey extends RenderLiving{
 

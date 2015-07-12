@@ -1,9 +1,9 @@
 package com.fnaf.Client.gui;
 
-import com.fnaf.Client.main.Reference;
-import com.fnaf.Client.main.main_fnaf;
 import com.fnaf.Client.utils.Utils.ClientUtils;
 import com.fnaf.Common.Items.Tablet;
+import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.main.main_fnaf;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;

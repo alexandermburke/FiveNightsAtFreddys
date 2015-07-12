@@ -3,9 +3,9 @@ package com.fnaf.Client.event;
 import com.fnaf.Client.gui.GUIRunMod;
 import com.fnaf.Client.gui.GuiMainMenuFNAF;
 import com.fnaf.Client.gui.jumpscares.GUIBonnieJumpscare;
-import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.Entity.bonnie.EntityBonnieMob;
 import com.fnaf.Common.Items.FNAFItems;
+import com.fnaf.Common.main.Reference;
 
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

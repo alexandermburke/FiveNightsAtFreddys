@@ -2,7 +2,7 @@ package com.fnaf.Common.armor.freddy;
 
 import com.fnaf.Client.gui.GUIDevMode;
 import com.fnaf.Client.gui.GUIMask;
-import com.fnaf.Client.main.main_fnaf;
+import com.fnaf.Common.main.main_fnaf;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
