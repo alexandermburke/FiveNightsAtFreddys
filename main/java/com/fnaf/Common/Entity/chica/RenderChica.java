@@ -7,7 +7,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderChica extends RenderLiving{
 
-	private static final ResourceLocation mobTextures = new ResourceLocation(com.fnaf.Client.main.Strings.MODID + ":textures/models/chica.png");
+	private static final ResourceLocation mobTextures = new ResourceLocation(com.fnaf.Client.main.Reference.MODID + ":textures/models/chica.png");
 	private static final String __OBFID = "CL_00000984";
 	
 	public RenderChica(ModelBase par1ModelBase, float par2) {

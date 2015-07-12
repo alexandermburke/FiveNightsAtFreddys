@@ -2,7 +2,7 @@ package com.fnaf.Common.Blocks.render;
 
 import org.lwjgl.opengl.GL11;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.Blocks.Models.ModelLootBox;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderLootBox extends TileEntitySpecialRenderer{
 
-	ResourceLocation texture = new ResourceLocation(Strings.MODID + ":"  + "textures/blocks/models/lootbox.png");
+	ResourceLocation texture = new ResourceLocation(Reference.MODID + ":"  + "textures/blocks/models/lootbox.png");
 	
 			
 		private ModelLootBox model;

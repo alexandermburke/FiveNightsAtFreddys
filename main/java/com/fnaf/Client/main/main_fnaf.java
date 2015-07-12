@@ -1,40 +1,26 @@
 package com.fnaf.Client.main;
 
-import ibxm.Player;
-
 import java.util.HashMap;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiMainMenu;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.client.event.GuiOpenEvent;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
 
 import com.fnaf.Client.commands.Commands;
 import com.fnaf.Client.event.Events;
 import com.fnaf.Client.gui.GUIOverlayDev;
+import com.fnaf.Client.gui.GuiHelper;
+import com.fnaf.Client.gui.GuiMainMenuFNAF;
 import com.fnaf.Client.handler.ConfigurationHandler;
 import com.fnaf.Client.registry.EntityRegister;
 import com.fnaf.Client.utils.CreativeTabFNAF;
 import com.fnaf.Client.utils.CreativeTabFNAF2;
 import com.fnaf.Client.utils.SpawnEvent;
-import com.fnaf.Common.Blocks.LootBox;
-import com.fnaf.Common.Entity.WitheredBonnie.EntityWitheredBonnie;
-import com.fnaf.Common.Entity.balloonboy.EntityBalloonBoy;
-import com.fnaf.Common.Entity.bonnie.EntityBonnie;
-import com.fnaf.Common.Entity.chica.EntityChica;
-import com.fnaf.Common.Entity.foxy.EntityFoxy;
-import com.fnaf.Common.Entity.freddy.EntityFreddy;
-import com.fnaf.Common.Entity.goldenfreddy.EntityGoldenFreddy;
-import com.fnaf.Common.Entity.mangle.EntityMangle;
-import com.fnaf.Common.Entity.puppet.EntityPuppet;
-import com.fnaf.Common.Entity.springtrap.EntitySpringtrap;
-import com.fnaf.Common.Entity.toybonnie.EntityToyBonnie;
-import com.fnaf.Common.Entity.toychica.EntityToyChica;
-import com.fnaf.Common.Entity.toyfreddy.EntityToyFreddy;
 import com.fnaf.Common.Items.FNAFItems;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.server.MinecraftServer;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -46,8 +32,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = Strings.MODID, name = Strings.name, version = Strings.version)
-public class main_fnaf
+@Mod(modid = Reference.MODID, name = Reference.name, version = Reference.version)
+public class main_fnaf 
 {
 	public static enum GameMode
     {
@@ -112,39 +98,61 @@ public class main_fnaf
 	public static CommonProxy proxy;
 	
     
-    @Instance(Strings.MODID)
+    @Instance(Reference.MODID)
+
+    
     public static main_fnaf modInstance;
     public HashMap<String, Object[]> cameraUsePositions = new HashMap<String, Object[]>();
     public static ConfigurationHandler config = new ConfigurationHandler();
 	
     @EventHandler
 	public void postInit(FMLPostInitializationEvent event){
-		System.out.println("Config File Succesfully Loaded and Named: " + Strings.MODID + ".cfg");
+		System.out.println("Config File Succesfully Loaded and Named: " + Reference.MODID + ".cfg");
 		configFile.load(config);
         if(configFile.hasChanged())
         {
             configFile.save();
-            System.out.println("Config File Successfully Saved to .minecraft/config/" + Strings.MODID + ".cfg");
+            System.out.println("Config File Successfully Saved to .minecraft/config/" + Reference.MODID + ".cfg");
         }
 
-        MinecraftForge.EVENT_BUS.register(new Events());
-    	FMLCommonHandler.instance().bus().register(new Events());
     	
 	}
+
+    GuiMainMenuFNAF Override = new GuiMainMenuFNAF();
+	Minecraft mc = Minecraft.getMinecraft();
+    
+		@SubscribeEvent
+    	public void MainMenuOverride(GuiOpenEvent event) {
+		
+	        if (mc.currentScreen instanceof GuiMainMenu) {
+	        	
+	        	 GuiHelper.addOverride(GuiMainMenu.class, new GuiMainMenuFNAF());
+			
+	        }
+			
+	}
+	
+	
+    
+    
     @EventHandler
 	public void onServerStarting(FMLServerStartingEvent event)
 	{
-    	Commands.init(event);
+    	Commands.register(event);
     	
 	}
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent PreEvent)
     {
     	
+
+        MinecraftForge.EVENT_BUS.register(new Events());
+    	FMLCommonHandler.instance().bus().register(new Events());
     	
     	
+    	System.out.println("Details:" + Reference.MODID + ", " + Reference.version + ", " + Reference.beta);
     	
-    	System.out.println("Details:" + Strings.MODID + ", " + Strings.version + ", " + Strings.beta);
+
     	
     	
     	GUIOverlayDev.load();
@@ -163,7 +171,7 @@ public class main_fnaf
     	proxy.registerRenderThings();
     	
     	
-    	System.out.println("Items, Entitys, and Blocks Loaded for:" + Strings.version + ", " + Strings.MODID );
+    	System.out.println("Items, Entitys, and Blocks Loaded for:" + Reference.version + ", " + Reference.MODID );
     	 }
     
     public static void log(String par1){
@@ -204,6 +212,7 @@ public class main_fnaf
 	public static String getVersion(){
 		return VERSION;
 	}
+	
 
 	
     

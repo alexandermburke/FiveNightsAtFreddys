@@ -2,7 +2,7 @@ package com.fnaf.Client.gui;
 
 import org.lwjgl.opengl.GL11;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
@@ -19,13 +19,12 @@ public class GUIMask   extends GuiScreen{
 
 	int guiwidth = 1024;
 	int guiheight = 768;
-	
-	@Override
+
 	public void drawScreen(int x, int y, float ticks) {
 		drawDefaultBackground();
 		int guiY = (height - guiheight);
 		int guiX = (width - guiwidth);
-		mc.renderEngine.bindTexture(new ResourceLocation(Strings.MODID, "textures/gui/freddymask.png"));
+		mc.renderEngine.bindTexture(new ResourceLocation(Reference.MODID, "textures/gui/freddymask.png"));
 		drawTexturedModalRect(guiY, guiX, 0, 0, guiwidth, guiheight);
 		super.drawScreen(y, x, ticks);
 		
@@ -34,7 +33,6 @@ public class GUIMask   extends GuiScreen{
 	}
 	
 	
-	@Override
 	public void initGui() {
 		
 		int guiX = (height - guiheight);

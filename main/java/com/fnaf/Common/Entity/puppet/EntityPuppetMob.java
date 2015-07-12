@@ -42,5 +42,16 @@ public class EntityPuppetMob extends EntityMob{
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 	}
 
-
+	protected String getLivingSound()
+	{
+	    return "fnafvtwo:jackinthebox";
+	}
+	protected String getHurtSound()
+	{
+	    return "fnafvtwo:jackinthebox";
+	}
+	protected String getDeathSound()
+	{
+	    return "fnafvtwo:deathscream";
+	}
 }

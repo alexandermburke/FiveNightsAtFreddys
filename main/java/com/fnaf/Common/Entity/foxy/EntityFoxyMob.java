@@ -39,5 +39,16 @@ public class EntityFoxyMob extends EntityMob{
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 	}
 
-
+	protected String getLivingSound()
+	{
+	    return "fnafvtwo:pirate_song2";
+	}
+	protected String getHurtSound()
+	{
+	    return "fnafvtwo:voicez";
+	}
+	protected String getDeathSound()
+	{
+	    return "fnafvtwo:deathscream";
+	}
 }

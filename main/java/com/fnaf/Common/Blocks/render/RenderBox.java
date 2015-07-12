@@ -2,7 +2,7 @@ package com.fnaf.Common.Blocks.render;
 
 import org.lwjgl.opengl.GL11;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.Blocks.Models.ModelCamera;
 import com.fnaf.Common.Blocks.Models.ModelFNAF3Box;
 
@@ -12,20 +12,27 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderBox extends TileEntitySpecialRenderer {
 
-
-	ResourceLocation texture = new ResourceLocation(Strings.MODID + ":"  + "textures/blocks/models/box.png");
+	private static final ResourceLocation texture = new ResourceLocation(Reference.MODID + ":" + "textures/blocks/models/box.png");
 	
-			
-		private ModelFNAF3Box model;
-		
-		public RenderBox() {
-			this.model = model;
-			
-		}
+	public ModelFNAF3Box model;
+	
+	public RenderBox() {
+		this.model = new ModelFNAF3Box();
+	}
 	
 	@Override
-	public void renderTileEntityAt(TileEntity p_147500_1_, double p_147500_2_, double p_147500_4_, double p_147500_6_, float p_147500_8_) {
-	GL11.glPushMatrix();
+	public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float f) {
+	
+		
+		GL11.glPushMatrix();
+		GL11.glTranslatef((float)x + 0.5F, (float)y + 1.5F, (float)z + 0.5F);
+		GL11.glRotatef(180, 0F, 0F, 1F);
 		this.bindTexture(texture);
+		GL11.glPushMatrix();
+		this.model.renderModel(0.0625F);
+		GL11.glPopMatrix();
+		GL11.glPopMatrix();
 	}
+
+
 }

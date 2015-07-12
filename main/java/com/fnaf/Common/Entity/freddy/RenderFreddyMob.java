@@ -7,7 +7,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderFreddyMob extends RenderLiving{
 
-	private static final ResourceLocation mobTextures = new ResourceLocation(com.fnaf.Client.main.Strings.MODID + ":textures/models/freddy.png");
+	private static final ResourceLocation mobTextures = new ResourceLocation(com.fnaf.Client.main.Reference.MODID + ":textures/models/freddy.png");
 	private static final String __OBFID = "CL_00000984";
 	
 	public RenderFreddyMob(ModelBase par1ModelBase, float par2) {

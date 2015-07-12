@@ -6,7 +6,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.fnaf.Client.gui.GUIDevMode;
 import com.fnaf.Client.gui.GUIMask;
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 import com.fnaf.Client.main.main_fnaf;
 
 import net.minecraft.client.Minecraft;
@@ -69,7 +69,7 @@ public class itemFreddy extends ItemArmor
 	        float f = 0.5F;
 	        GL11.glColor4f(f, f, f, 1.0F);
 	        GL11.glDisable(GL11.GL_ALPHA_TEST);
-	        Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation(Strings.MODID, "textures/gui/freddymask.png"));
+	        Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation(Reference.MODID, "textures/gui/freddymask.png"));
 	        tessellator.startDrawingQuads();
 	        tessellator.addVertexWithUV(0.0D, (double)height, -90.0D, 0.0D, 1.0D);
 	        tessellator.addVertexWithUV((double)width, (double)height, -90.0D, 1.0D, 1.0D);
@@ -105,7 +105,7 @@ public class itemFreddy extends ItemArmor
      */
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        return Strings.MODID + ":" + "textures/armor/freddy.png";
+        return Reference.MODID + ":" + "textures/armor/freddy.png";
     }
     
     /**

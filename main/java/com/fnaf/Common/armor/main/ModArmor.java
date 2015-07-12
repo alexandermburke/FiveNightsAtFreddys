@@ -1,6 +1,6 @@
 package com.fnaf.Common.armor.main;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.armor.bonnie.itemBonnie;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -24,13 +24,13 @@ public static Item BonnieFeet;
 		ArmorMaterial Useless = EnumHelper.addArmorMaterial("useless", 0, new int[]{0, 0, 0, 0}, 0);
    
 		BonnieHelmet = (new itemBonnie(Useless, 0, 0).setUnlocalizedName("bonnie_helmet"));
-		GameRegistry.registerItem(BonnieHelmet, "bonnie_helmet", Strings.MODID);
+		GameRegistry.registerItem(BonnieHelmet, "bonnie_helmet", Reference.MODID);
 		
 		BonnieChestplate = (new itemBonnie(Useless, 1, 0).setUnlocalizedName("bonnie_chestplate"));
-		GameRegistry.registerItem(BonnieChestplate, "bonnie_chestplate", Strings.MODID);
+		GameRegistry.registerItem(BonnieChestplate, "bonnie_chestplate", Reference.MODID);
 		
 		BonnieLeggings = (new itemBonnie(Useless, 2, 0).setUnlocalizedName("bonnie_leggings"));
-		GameRegistry.registerItem(BonnieLeggings, "bonnie_leggings", Strings.MODID);
+		GameRegistry.registerItem(BonnieLeggings, "bonnie_leggings", Reference.MODID);
 		
 		
 }

@@ -1,6 +1,6 @@
 package com.fnaf.Client.utils;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 
 import cpw.mods.fml.common.FMLLog;
 
@@ -10,7 +10,7 @@ public class LogHelper
 {
     public static void log(Level logLevel, Object object)
     {
-        FMLLog.log(Strings.MODID, logLevel, String.valueOf(object));
+        FMLLog.log(Reference.MODID, logLevel, String.valueOf(object));
     }
 
     public static void all(Object object)

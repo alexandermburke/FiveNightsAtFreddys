@@ -39,5 +39,16 @@ public class EntityMangleMob extends EntityMob{
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 	}
 
-
+	protected String getLivingSound()
+	{
+	    return "fnafvtwo:manglestatic";
+	}
+	protected String getHurtSound()
+	{
+	    return "fnafvtwo:voicez";
+	}
+	protected String getDeathSound()
+	{
+	    return "fnafvtwo:deathscream";
+	}
 }

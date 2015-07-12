@@ -4,7 +4,7 @@ import org.lwjgl.opengl.GL11;
 
 import scala.reflect.internal.Trees.Super;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;

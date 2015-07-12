@@ -39,5 +39,16 @@ public class EntityChicaMob extends EntityMob{
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 	}
 
-
+	protected String getLivingSound()
+	{
+	    return "fnafvtwo:voicez";
+	}
+	protected String getHurtSound()
+	{
+	    return "fnafvtwo:manglestatic";
+	}
+	protected String getDeathSound()
+	{
+	    return "fnafvtwo:deathscream";
+	}
 }

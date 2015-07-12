@@ -30,6 +30,16 @@ public class EntityPhantomChicaMob extends EntityMob{
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0D);
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 	}
-
-
+	protected String getLivingSound()
+	{
+	    return "fnafvtwo:voicez";
+	}
+	protected String getHurtSound()
+	{
+	    return "fnafvtwo:walking";
+	}
+	protected String getDeathSound()
+	{
+	    return "fnafvtwo:deathscream";
+	}
 }

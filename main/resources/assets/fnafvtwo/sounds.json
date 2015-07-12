@@ -4,5 +4,15 @@
 "goldenfreddyscream": {"category": "master","sounds": [{"name": "goldenfreddyscream","stream": false}]},
 "manglestatic": {"category": "master","sounds": [{"name": "manglestatic","stream": false}]},
 "bbliving": {"category": "master","sounds": [{"name": "bbliving","stream": false}]},
-"startphonecall": {"category": "master","sounds": [{"name": "startphonecall","stream": false}]}
+"phonecall2": {"category": "master","sounds": [{"name": "phonecall2","stream": false}]},
+"voicez": {"category": "master","sounds": [{"name": "voicez","stream": false}]},
+"step": {"category": "master","sounds": [{"name": "step","stream": false}]},
+"phonecall1": {"category": "master","sounds": [{"name": "phonecall1","stream": false}]},
+"freddylaugh": {"category": "master","sounds": [{"name": "freddylaugh","stream": false}]},
+"pirate_song2": {"category": "master","sounds": [{"name": "pirate_song2","stream": false}]},
+"enhale1": {"category": "master","sounds": [{"name": "enhale1","stream": false}]},
+"jackinthebox": {"category": "master","sounds": [{"name": "jackinthebox","stream": false}]},
+"moan": {"category": "master","sounds": [{"name": "moan","stream": false}]},
+"stare": {"category": "master","sounds": [{"name": "stare","stream": false}]}
+
 }

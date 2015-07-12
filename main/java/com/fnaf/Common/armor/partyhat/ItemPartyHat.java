@@ -3,7 +3,7 @@ package com.fnaf.Common.armor.partyhat;
 import java.util.List;
 
 import com.fnaf.Client.main.ClientProxy;
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
@@ -58,7 +58,7 @@ public class ItemPartyHat extends ItemArmor
      */
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        return Strings.MODID + ":textures/models/bonnie.png";
+        return Reference.MODID + ":textures/models/bonnie.png";
     }
     
     /**

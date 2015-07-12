@@ -1,6 +1,6 @@
 package com.fnaf.Client.gui;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
@@ -12,12 +12,12 @@ public class GUIDevMode extends GuiScreen{
 	int guiwidth = 400;
 	int guiheight = 87;
 	
-	@Override
+	
 	public void drawScreen(int x, int y, float ticks) {
 		drawDefaultBackground();
 		int guiX = (height - guiheight);
 		int guiY = (width - guiwidth);
-		mc.renderEngine.bindTexture(new ResourceLocation(Strings.MODID, "textures/gui/devmode.png"));
+		mc.renderEngine.bindTexture(new ResourceLocation(Reference.MODID, "textures/gui/devmode.png"));
 		drawTexturedModalRect(guiX, guiY, 0, 0, guiwidth, guiheight);
 		super.drawScreen(x, y, ticks);
 		
@@ -26,7 +26,6 @@ public class GUIDevMode extends GuiScreen{
 	}
 	
 	
-	@Override
 	public void initGui() {
 		
 		int guiX = (height - guiheight);
@@ -36,7 +35,6 @@ public class GUIDevMode extends GuiScreen{
 		super.initGui();
 	}
 	
-	@Override
 	protected void actionPerformed(GuiButton button) {
 		switch(button.id) {
 		case 0:

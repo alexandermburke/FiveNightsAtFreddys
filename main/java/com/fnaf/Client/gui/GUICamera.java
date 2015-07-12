@@ -1,6 +1,6 @@
 package com.fnaf.Client.gui;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 import com.fnaf.Client.main.main_fnaf;
 import com.fnaf.Client.utils.Utils.ClientUtils;
 import com.fnaf.Common.Items.Tablet;

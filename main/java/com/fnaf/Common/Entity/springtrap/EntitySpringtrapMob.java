@@ -38,6 +38,17 @@ public class EntitySpringtrapMob extends EntityMob{
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0D);
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(8D);
 	}
-
+	protected String getLivingSound()
+	{
+	    return "fnafvtwo:moan";
+	}
+	protected String getHurtSound()
+	{
+	    return "fnafvtwo:voicez";
+	}
+	protected String getDeathSound()
+	{
+	    return "fnafvtwo:deathscream";
+	}
 
 }

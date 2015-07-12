@@ -1,6 +1,6 @@
 package com.fnaf.Common.Blocks;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.Blocks.tileentity.TileEntityCamera;
 
 import net.minecraft.block.Block;

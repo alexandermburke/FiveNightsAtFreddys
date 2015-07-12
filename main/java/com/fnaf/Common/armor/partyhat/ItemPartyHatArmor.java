@@ -1,6 +1,6 @@
 package com.fnaf.Common.armor.partyhat;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 import com.fnaf.Client.main.main_fnaf;
 
 import net.minecraft.block.Block;
@@ -24,7 +24,7 @@ public class ItemPartyHatArmor extends ItemArmor
     {
     	String unlocalizedName = name.toLowerCase().replaceAll(" ", "_").replaceAll("'", "");
 		item.setUnlocalizedName(unlocalizedName);
-		item.setTextureName(Strings.MODID + ":" + unlocalizedName);
+		item.setTextureName(Reference.MODID + ":" + unlocalizedName);
 		item.setCreativeTab(main_fnaf.tabFnaf);
 		return unlocalizedName;
 		

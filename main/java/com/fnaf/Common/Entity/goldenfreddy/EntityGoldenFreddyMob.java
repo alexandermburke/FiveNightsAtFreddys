@@ -38,6 +38,17 @@ public class EntityGoldenFreddyMob extends EntityMob{
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0D);
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 	}
-
+	protected String getLivingSound()
+	{
+	    return "fnafvtwo:voicez";
+	}
+	protected String getHurtSound()
+	{
+	    return "fnafvtwo:freddylaugh";
+	}
+	protected String getDeathSound()
+	{
+	    return "fnafvtwo:goldenfreddyscream";
+	}
 
 }

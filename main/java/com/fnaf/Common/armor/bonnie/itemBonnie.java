@@ -3,7 +3,7 @@ package com.fnaf.Common.armor.bonnie;
 import java.util.List;
 
 import com.fnaf.Client.main.ClientProxy;
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 import com.fnaf.Client.main.main_fnaf;
 import com.fnaf.Common.Entity.bonnie.Bonnie;
 
@@ -92,7 +92,7 @@ public class itemBonnie extends ItemArmor
 	@Override
 	 public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
 	    {
-	        return Strings.MODID + ":"  + "textures/models/bonnie.png";
+	        return Reference.MODID + ":"  + "textures/models/bonnie.png";
 	    }
 	    
 	

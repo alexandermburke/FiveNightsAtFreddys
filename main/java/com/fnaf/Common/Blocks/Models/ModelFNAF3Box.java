@@ -416,7 +416,6 @@ public class ModelFNAF3Box extends ModelBase
       Mangle_14.setTextureSize(256, 128);
       Mangle_14.mirror = true;
       setRotation(Mangle_14, -0.3665191F, -1.134464F, -0.296706F);
-      Mangle_15.mirror = true;
       Mangle_15 = new ModelRenderer(this, 202, 96);
       Mangle_15.addBox(2F, -10F, -5.066667F, 2, 2, 1);
       Mangle_15.setRotationPoint(4F, 11.46667F, -0.06666667F);
@@ -487,6 +486,72 @@ public class ModelFNAF3Box extends ModelBase
     Mangle_13.render(f5);
     Mangle_14.render(f5);
     Mangle_15.render(f5);
+  }
+  
+  public void renderModel(float f) {
+	  Bonnie_1.render(f);
+	  Bonnie_2.render(f);
+	  Bonnie_3.render(f);
+	  Bonnie_4.render(f);
+	  Bonnie_5.render(f);
+	  Bonnie_6.render(f);
+	  Bonnie_7.render(f);
+	  Bonnie_8.render(f);
+	  Bonnie_11.render(f);
+	  Bonnie_12.render(f);
+	  Bonnie_15.render(f);
+	  Box_1.render(f);
+	    Box_2.render(f);
+	    Box_3.render(f);
+	    Box_4.render(f);
+	    Box_5.render(f);
+	    Box_6.render(f);
+	    Box_7.render(f);
+	    BB_1.render(f);
+	    BB_2.render(f);
+	    BB_3.render(f);
+	    BB_4.render(f);
+	    BB_5.render(f);
+	    Box_base.render(f);
+	    Chica_1.render(f);
+	    Chica_2.render(f);
+	    Chica_3.render(f);
+	    Chica_4.render(f);
+	    Chica_4.render(f);
+	    Chica_5.render(f);
+	    Chica_6.render(f);
+	    Chica_7.render(f);
+	    Chica_8.render(f);
+	    Chica_9.render(f);
+	    Freddy_1.render(f);
+	    Freddy_2.render(f);
+	    Freddy_3.render(f);
+	    Freddy_4.render(f);
+	    Freddy_5.render(f);
+	    Freddy_6.render(f);
+	    Freddy_7.render(f);
+	    Mangle_1.render(f);
+	    Mangle_2.render(f);
+	    Mangle_3.render(f);
+	    Mangle_4.render(f);
+	    Mangle_5.render(f);
+	    Mangle_6.render(f);
+	    Mangle_7.render(f);
+	    Mangle_8.render(f);
+	    Mangle_9.render(f);
+	    Mangle_10.render(f);
+	    Mangle_11.render(f);
+	    Mangle_12.render(f);
+	    Mangle_13.render(f);
+	    Mangle_14.render(f);
+	    Mangle_15.render(f);
+	  
+	  
+	  
+	  
+	  
+	  
+	  
   }
   
   private void setRotation(ModelRenderer model, float x, float y, float z)

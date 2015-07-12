@@ -38,6 +38,17 @@ public class EntityBonnieMob extends EntityMob{
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.15D);
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 	}
-
+	protected String getLivingSound()
+	{
+	    return "fnafvtwo:step";
+	}
+	protected String getHurtSound()
+	{
+	    return "fnafvtwo:voicez";
+	}
+	protected String getDeathSound()
+	{
+	    return "fnafvtwo:deathscream";
+	}
 
 }

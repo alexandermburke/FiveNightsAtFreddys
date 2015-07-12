@@ -6,13 +6,13 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.Blocks.Models.ModelCamera;
 import com.fnaf.Common.Blocks.Models.ModelLootBox;
 
 public class RenderCamera extends TileEntitySpecialRenderer{
 
-	ResourceLocation texture = new ResourceLocation(Strings.MODID + ":"  + "textures/blocks/models/camera.png");
+	ResourceLocation texture = new ResourceLocation(Reference.MODID + ":"  + "textures/blocks/models/camera.png");
 	
 			
 		private ModelCamera model;

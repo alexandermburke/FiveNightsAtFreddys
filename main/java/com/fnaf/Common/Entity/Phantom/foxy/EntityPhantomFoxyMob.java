@@ -30,6 +30,18 @@ public class EntityPhantomFoxyMob extends EntityMob{
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.15D);
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 	}
-
+	protected String getLivingSound()
+	{
+	    return "fnafvtwo:pirate_song2";
+	}
+	protected String getHurtSound()
+	{
+	    return "fnafvtwo:pirate_song2";
+	}
+	protected String getDeathSound()
+	{
+	    return "fnafvtwo:deathscream";
+	}
+	
 
 }

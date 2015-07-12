@@ -42,6 +42,18 @@ public class EntityBalloonBoyMob extends EntityMob{
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.15D);
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10D);
 	}
-
-
+	
+	
+	protected String getLivingSound()
+	{
+	    return "fnafvtwo:bbliving";
+	}
+	protected String getHurtSound()
+	{
+	    return "fnafvtwo:enhale1";
+	}
+	protected String getDeathSound()
+	{
+	    return "fnafvtwo:enhale1";
+	}
 }

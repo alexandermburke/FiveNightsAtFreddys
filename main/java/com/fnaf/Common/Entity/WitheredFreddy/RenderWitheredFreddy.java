@@ -5,12 +5,12 @@ import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
-import com.fnaf.Client.main.Strings;
+import com.fnaf.Client.main.Reference;
 import com.fnaf.Common.Entity.WitheredBonnie.EntityWitheredBonnieMob;
 
 public class RenderWitheredFreddy extends RenderLiving{
 
-	private static final ResourceLocation mobTextures = new ResourceLocation(Strings.MODID + ":textures/models/witheredfreddy.png");
+	private static final ResourceLocation mobTextures = new ResourceLocation(Reference.MODID + ":textures/models/witheredfreddy.png");
 	@SuppressWarnings("unused")
 	private static final String __OBFID = "CL_00000984";
 	
