@@ -19,6 +19,7 @@ import com.fnaf.Client.utils.CreativeTabFNAF;
 import com.fnaf.Client.utils.CreativeTabFNAF2;
 import com.fnaf.Client.utils.SpawnEvent;
 import com.fnaf.Common.Items.FNAFItems;
+import com.fnaf.Common.world.gen.WorldGenSU;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -29,6 +30,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MODID, name = Reference.name, version = Reference.version)
 public class main_fnaf 
@@ -131,7 +133,7 @@ public class main_fnaf
     {
      	 GuiHelper.addOverride(GuiMainMenu.class, new GuiMainMenuFNAF());
 			
-
+     	GameRegistry.registerWorldGenerator(new WorldGenSU(), 0);
 
         MinecraftForge.EVENT_BUS.register(new Events());
     	FMLCommonHandler.instance().bus().register(new Events());

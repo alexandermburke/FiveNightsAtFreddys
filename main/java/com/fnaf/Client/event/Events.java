@@ -45,6 +45,10 @@ public class Events {
 			
 			EntityPlayer p = (EntityPlayer) event.entity;
 			p.addChatMessage(new ChatComponentText("§5Thanks for downloading the FNAF Mod ~ Beta 3.5.0 View changes at: http://tinyurl.com/fnafmodbeta"));
+				
+			p.addChatComponentMessage(new ChatComponentText(p + " has logged in correctly."));
+
+			
 			
 		}
 	
@@ -77,24 +81,31 @@ public class Events {
 	    
 	  }
 	  
+	  EntityPlayer p;
+	  
 	
 
 
 	@SubscribeEvent
 	  public void onPlayerDeathByFNAF(LivingDeathEvent event)
 	  {
-		  
-		  EntityPlayer p = Helper.PlayerEvent(null);
-		  
-		    if ((event.entity instanceof EntityPlayer))
-		    {
-		    	
-		
+		    
+		  	
 		    	
 		        if ((event.source.getEntity() instanceof EntityBonnieMob))
 		        {
 		    	
-		        	System.out.println("Player jupscared by bonnie.");
+		        	System.out.println("Player jumpscared by bonnie.");
+		        	
+		        	Minecraft.getMinecraft().displayGuiScreen(new GUIBonnieJumpscare(null, null));
+		        	       
+		        	
+		        }
+		        
+		        if ((event.source.getEntity() instanceof EntityBonnieMob))
+		        {
+		    	
+		        	System.out.println(p + "jumpscared by Golden Freddy.");
 		        	
 		        	Minecraft.getMinecraft().displayGuiScreen(new GUIBonnieJumpscare(null, null));
 		        	       
@@ -106,5 +117,4 @@ public class Events {
 		    }
 		    
 		  
-	  }	
-}				
+}

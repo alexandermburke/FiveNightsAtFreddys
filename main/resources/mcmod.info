@@ -2,17 +2,17 @@
 {
   "modid": "fnafvtwo",
   "name": "Five nights at Freddy's V3 Mod",
-  "description": "",
-  "version": "v3.3",
-  "beta": "false",
+  "description": "A mod based off the Five nights at Freddys Franchise.",
+  "version": "v3.5.0",
+  "beta": "true",
   "mcversion": "1.7.0",
   "url": "http://www.itopside.us",
   "updateUrl": "http://www.itopside.us/changelog",
-  "authorList": ["T0psid3 (Coder), CuchoTheSpanishman (Modeler), and iLexiconn (LLibrary)"],
+  "authorList": ["Magik (Coder), CuchoTheSpanishman (Modeler), and iLexiconn (LLibrary)"],
   "credits": "",
   "logoFile": "LogoFile.png",
   "screenshots": [],
-  "dependencies": [LLibrary],
+  "dependencies": [],
   "Config": ["true"]
 }
 ]

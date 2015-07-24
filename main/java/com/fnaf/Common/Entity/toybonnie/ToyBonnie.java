@@ -3,6 +3,7 @@ package com.fnaf.Common.Entity.toybonnie;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
 
 public class ToyBonnie extends ModelBase
 {
@@ -63,7 +64,7 @@ public class ToyBonnie extends ModelBase
   
   public ToyBonnie()
   {
-    textureWidth = 128;
+	textureWidth = 128;
     textureHeight = 64;
     
       Shape1 = new ModelRenderer(this, 0, 0);
@@ -388,7 +389,156 @@ public class ToyBonnie extends ModelBase
   
   public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
   {
-    super.render(entity, f, f1, f2, f3, f4, f5);
+
+
+  			// Animation Start  
+	  
+  	float prog = 0.1F;
+  	
+  		// Walking Animation
+  	
+  		/*
+  	
+		this.Shape31.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape30.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape32.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		
+			// Right Hand  
+		
+		this.Shape34.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape51.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape48.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape50.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape49.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		
+			// Right Hand end 
+		
+			// Left Hand 
+		
+		this.Shape35.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape55.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape52.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape54.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape53.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		
+			// Left Hand end
+		
+		
+  	
+		this.Shape33.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape31.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+		this.Shape30.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+
+
+  			// Animation Start (Legs) 
+		
+
+		this.Shape9.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape8.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		
+  	
+
+		this.Shape9.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+		this.Shape8.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+		
+		this.Shape4.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape3.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		
+  	
+		this.Shape4.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+		this.Shape3.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+		
+		
+		this.Shape2.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		this.Shape1.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+		
+  	
+		this.Shape2.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+		this.Shape1.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+		
+		*/
+		
+		// End Animation  
+  	
+	// Right Hand  
+	
+	this.Shape34.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	this.Shape51.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	this.Shape48.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	this.Shape50.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	this.Shape49.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	
+		// Right Hand end 
+	
+		// Left Hand 
+	
+	this.Shape35.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	this.Shape55.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	this.Shape52.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	this.Shape54.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	this.Shape53.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	
+		// Left Hand end
+	
+  	
+  			// Shakehead Animation
+  				
+  			this.Shape37.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+  			this.Shape36.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	
+	
+  			this.Shape37.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+  			this.Shape36.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+	
+  			this.Shape18.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+  			this.Shape21.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	
+	
+  			this.Shape18.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+  			this.Shape21.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+	
+  			this.Shape23.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+  			this.Shape22.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	
+	
+  			this.Shape23.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+  			this.Shape22.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+	
+  			this.Shape28.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+  			this.Shape22.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	
+	
+  			this.Shape28.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+  			this.Shape22.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+	
+
+  			this.Shape20.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+  			this.Shape43.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	
+	
+  			this.Shape20.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+  			this.Shape43.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+	
+  			this.Shape40.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+  			this.Shape25.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	
+	
+  			this.Shape40.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+  			this.Shape25.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+	
+  			this.Shape27.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+  			this.Shape24.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+	
+	
+  			this.Shape27.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+  			this.Shape24.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+  			
+  			this.Shape26.rotateAngleX = MathHelper.cos(prog * 0.6662F + (float)Math.PI) * 1.4F * prog;
+  			this.Shape26.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+  	  		
+  			/* End Shake Head Animation */
+	  
+	 super.render(entity, f, f1, f2, f3, f4, f5);
     setRotationAngles(f, f1, f2, f3, f4, f5);
     Shape1.render(f5);
     Shape2.render(f5);
@@ -444,6 +594,14 @@ public class ToyBonnie extends ModelBase
     Shape57.render(f5);
     Shape58.render(f5);
   }
+  public void setAngles() {
+	//reset the rotation point each render tick
+		Shape9.rotationPointY = 24F;
+	}
+  	
+  	public static Float PI = 3.14F;
+  
+ 
   
   private void setRotation(ModelRenderer model, float x, float y, float z)
   {

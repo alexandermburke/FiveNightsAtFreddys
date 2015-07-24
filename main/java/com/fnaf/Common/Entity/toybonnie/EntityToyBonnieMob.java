@@ -16,17 +16,24 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.world.World;
 
-public class EntityToyBonnieMob extends EntityMob{
+public class EntityToyBonnieMob extends EntityMob {
 
+	private int animID;
+	private int animTick;
+	
 	public EntityToyBonnieMob(World par1World) {
 		super(par1World);
 	    this.setSize(0.6F, 2.9F);
-	    this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, true));
+	    animID = 0;
+		animTick = 0;
+		//ADD THIS!
+	   this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, true));
         this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
 		
-		
+		par1World.getGameRules().getGameRuleBooleanValue("");
 	}
+	
 	
 	public boolean isAIEnabled(){
 		return false;
@@ -49,6 +56,45 @@ public class EntityToyBonnieMob extends EntityMob{
 	protected String getDeathSound()
 	{
 	    return "fnafvtwo:deathscream";
+	}
+
+
+	/*
+	 * Implemented method from IAnimatedEntity.
+	 * Set the animID field to the id in the parameter.
+	 */
+	public void setAnimID(int id) {
+		animID = id;
+	}
+	
+	/*
+	 * Implemented method from IAnimatedEntity.
+	 * Set the animTick field to the tick in the parameter.
+	 */
+	public void setAnimTick(int tick) {
+		animTick = tick;
+	}
+	
+	/*
+	 * Implemented method from IAnimatedEntity.
+	 * Return the animID.
+	 */
+	public int getAnimID() {
+		return animID;
+	}
+	
+	/*
+	 * Implemented method from IAnimatedEntity.
+	 * Return the animTick.
+	 */
+	public int getAnimTick() {
+		return animTick;
+	}
+	
+	public void onUpdate() {
+		super.onUpdate();
+		//increment the animTick if there is an animation playing
+		if(animID != 0) animTick++;
 	}
 
 }
