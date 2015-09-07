@@ -22,7 +22,6 @@ import com.fnaf.Common.armor.bonnie.itemBonnie;
 import com.fnaf.Common.armor.freddy.itemFreddy;
 import com.fnaf.Common.main.Reference;
 import com.fnaf.Common.main.main_fnaf;
-import com.fnaf.dev.itemEnterDevMode;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -79,7 +78,6 @@ public class FNAFItems {
 	public static void register()
 	{
 		 
-		E = new itemEnterDevMode();
 		BPlushie = new itemBonniesPlushie();
 		FRPlushie = new itemFreddysPlushie();
 		BBPlushie = new itemBalloonBoysPlushie();
