@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "v2.0.2.4-PRE_ALPHA_dev"
+version = "V4.0.0-Build"
 group= "com.fnaf"
 archivesBaseName = "Five Nights at Freddy's Mod"
 
@@ -29,13 +29,11 @@ minecraft {
 repositories {
     mavenCentral()
     maven {
-        name = "ilexiconn"
-        url = "http://ilexiconn.net/maven"
+      
     }
 }
 
 dependencies {
-    compile 'net.ilexiconn.llibrary:LLibrary:0.1.0-1.7.10:dev'
 }
 
 processResources {
