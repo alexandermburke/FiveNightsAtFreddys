@@ -44,10 +44,10 @@ public class FNAFItems {
 	public static Item PartyHat8;
 	public static Item PartyHat9;
 	public static ItemStack FreddyHelmet;
-    public static Item BonnieHelmet;
-    public static Item BonnieChestplate;
-    public static Item BonnieLeggings;
-    public static Item BonnieBoots;
+    	public static Item BonnieHelmet;
+    	public static Item BonnieChestplate;
+	public static Item BonnieLeggings;
+	public static Item BonnieBoots;
 	public static Item BGuitar;
 	public static Item BBPlushie;
 	public static Item PlasticIngot;
