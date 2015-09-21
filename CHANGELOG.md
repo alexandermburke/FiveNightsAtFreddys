@@ -1,5 +1,10 @@
 #FNAFMod
 
+
+V4.0.0-2:
+
+Fixed Some Issues; Also Causing Issues on Client or Server Side.
+
 V4.0.0-1:
 
 Patched MODID Error
