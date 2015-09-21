@@ -7,7 +7,7 @@ import com.fnaf.Client.utils.Utils.ClientUtils;
 import com.fnaf.Common.Blocks.Camera;
 import com.fnaf.Common.Items.FNAFItems;
 import com.fnaf.Common.Items.Tablet;
-import com.fnaf.Common.main.main_fnaf;
+import com.fnaf.Common.main.MAIN_FNAF;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -319,7 +319,7 @@ public class EntityCamera extends Entity{
 	public String getCameraInfo(){
 		String nowViewing = EnumChatFormatting.UNDERLINE + "Now viewing camera #" + id + "\n\n";
 		String pos = EnumChatFormatting.YELLOW + "Pos: " + EnumChatFormatting.RESET + "X: " + (int) Math.floor(posX) + " Y: " + (int) (posY - 1D) + " Z: " + (int) Math.floor(posZ) + "\n";
-		String viewingFrom = (this.riddenByEntity != null && main_fnaf.modInstance.hasUsePosition(this.riddenByEntity.getCommandSenderName())) ? EnumChatFormatting.YELLOW + "Viewing from: " + EnumChatFormatting.RESET + " X: " + (int) Math.floor((Double) main_fnaf.modInstance.getUsePosition(this.riddenByEntity.getCommandSenderName())[0]) + " Y: " + (int) Math.floor((Double) main_fnaf.modInstance.getUsePosition(this.riddenByEntity.getCommandSenderName())[1]) + " Z: " + (int) Math.floor((Double) main_fnaf.modInstance.getUsePosition(this.riddenByEntity.getCommandSenderName())[2]) : "";
+		String viewingFrom = (this.riddenByEntity != null && MAIN_FNAF.modInstance.hasUsePosition(this.riddenByEntity.getCommandSenderName())) ? EnumChatFormatting.YELLOW + "Viewing from: " + EnumChatFormatting.RESET + " X: " + (int) Math.floor((Double) MAIN_FNAF.modInstance.getUsePosition(this.riddenByEntity.getCommandSenderName())[0]) + " Y: " + (int) Math.floor((Double) MAIN_FNAF.modInstance.getUsePosition(this.riddenByEntity.getCommandSenderName())[1]) + " Z: " + (int) Math.floor((Double) MAIN_FNAF.modInstance.getUsePosition(this.riddenByEntity.getCommandSenderName())[2]) : "";
 		return nowViewing + pos + viewingFrom;
 	}
 	

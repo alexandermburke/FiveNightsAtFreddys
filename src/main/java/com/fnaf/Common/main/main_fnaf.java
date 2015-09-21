@@ -11,8 +11,6 @@ import net.minecraftforge.common.config.Configuration;
 import com.fnaf.Client.commands.Commands;
 import com.fnaf.Client.event.Events;
 import com.fnaf.Client.gui.GUIOverlayDev;
-import com.fnaf.Client.gui.GuiHelper;
-import com.fnaf.Client.gui.GuiMainMenuFNAF;
 import com.fnaf.Client.handler.ConfigurationHandler;
 import com.fnaf.Client.registry.EntityRegister;
 import com.fnaf.Client.utils.CreativeTabFNAF;
@@ -33,8 +31,29 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MODID, name = Reference.name, version = Reference.version)
-public class main_fnaf 
+public class MAIN_FNAF 
 {
+	
+	
+	
+//	<!-- hey there, source code reader, who probably wants to ask if you can use this design on your Game mod. -->
+//	<!-- while I don't have an issue with it, the code is SO horrible and awful that it's much, much easier to -->
+//	<!-- just make your own version of the design, which is completely cool with us: most of the design's from -->
+//	<!-- apple's app store app anyway. again: you can use the design (but not the content) where you want, but -->
+//	<!-- it's awful, so for your sake, make your own. also, see Cydia's Info.plist for another of these equal- -->
+//	<!-- line-length paragraphs, which inspired this one. it's actually easier than i thought it'd be to make! -->
+	
+	//////	//////		  //\\
+	//	  //	//		 //	 \\			   //\\\\\\\\ ///||///	//	  //
+	//	  //	//		//	  \\		  //			 ||		//	//
+	//			//	   //------\\        //				 ||		////     
+	//			//	  //        \\		//		/////    ||		//	//
+	//			//	 //	         \\		//		  //	 ||		//	  //
+	//			//	//	          \\    ///////////	  ///||///	//		//
+	
+	
+	
+	
 	public static enum GameMode
     {
         DONOTRUN, NORMAL, CREATIVE, HARDCORE;
@@ -101,7 +120,7 @@ public class main_fnaf
     @Instance(Reference.MODID)
 
     
-    public static main_fnaf modInstance;
+    public static MAIN_FNAF modInstance;
     public HashMap<String, Object[]> cameraUsePositions = new HashMap<String, Object[]>();
     public static ConfigurationHandler config = new ConfigurationHandler();
 	
@@ -116,24 +135,20 @@ public class main_fnaf
 	
     
     
-    @EventHandler
-	public void onServerStarting(FMLServerStartingEvent event)
-	{
-    	Commands.register(event);
-    	
-	}
+    
+    
+    
     Boolean Main;
     Boolean AI;
     Boolean Animation;
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent PreEvent)
     {
-     	 GuiHelper.addOverride(GuiMainMenu.class, new GuiMainMenuFNAF());
 			
      	GameRegistry.registerWorldGenerator(new WorldGenSU(), 0);
 
-        MinecraftForge.EVENT_BUS.register(new Events());
-    	FMLCommonHandler.instance().bus().register(new Events());
+     //   MinecraftForge.EVENT_BUS.register(new Events());
+    //	FMLCommonHandler.instance().bus().register(new Events());
     	
     	
     	System.out.println("Details:" + Reference.MODID + ", " + Reference.version + ", " + Reference.beta);
@@ -161,7 +176,7 @@ public class main_fnaf
     	
     	MinecraftForge.EVENT_BUS.register(new SpawnEvent());
     	
-    	FMLCommonHandler.instance().bus().register(main_fnaf.modInstance);
+    	FMLCommonHandler.instance().bus().register(MAIN_FNAF.modInstance);
        	
     	EntityRegister.mainRegistry();
     	
@@ -182,8 +197,8 @@ public class main_fnaf
 	
 
 	public static void log(String par1, boolean isSevereError){
-		if(main_fnaf.debuggingMode){
-			System.out.println(isSevereError ? "{main_fnaf} {" + FMLCommonHandler.instance().getEffectiveSide() + "} {Severe}: " + par1 : "[main_fnaf] [" + FMLCommonHandler.instance().getEffectiveSide() + "] " + par1);
+		if(MAIN_FNAF.debuggingMode){
+			System.out.println(isSevereError ? "{MAIN_FNAF} {" + FMLCommonHandler.instance().getEffectiveSide() + "} {Severe}: " + par1 : "[main_fnaf] [" + FMLCommonHandler.instance().getEffectiveSide() + "] " + par1);
 		}
 	}
 	public Object[] getUsePosition(String playerName) {

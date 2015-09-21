@@ -21,7 +21,7 @@ import com.fnaf.Common.Items.Plushies.itemFreddysPlushie;
 import com.fnaf.Common.armor.bonnie.itemBonnie;
 import com.fnaf.Common.armor.freddy.itemFreddy;
 import com.fnaf.Common.main.Reference;
-import com.fnaf.Common.main.main_fnaf;
+import com.fnaf.Common.main.MAIN_FNAF;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -126,7 +126,6 @@ public class FNAFItems {
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBox.class,new RenderBox());
 		
 			
-			GameRegistry.registerTileEntity(TileEntityBox.class, "Box");
 			
 
     	
@@ -169,7 +168,7 @@ public class FNAFItems {
 		String unlocalizedName = name.toLowerCase().replaceAll(" ", "_").replaceAll("'", "");
 		item.setUnlocalizedName(unlocalizedName);
 		item.setTextureName(Reference.MODID + ":" + unlocalizedName);
-		item.setCreativeTab(main_fnaf.tabFnaf2);
+		item.setCreativeTab(MAIN_FNAF.tabFnaf2);
 		
 		GameRegistry.registerItem(item, unlocalizedName);
 	}
@@ -179,7 +178,7 @@ public class FNAFItems {
 		String unlocalizedName = name.toLowerCase().replaceAll(" ", "_").replaceAll("'", "");
 		item.setUnlocalizedName(unlocalizedName);
 		item.setTextureName(Reference.MODID + ":" + unlocalizedName);
-		item.setCreativeTab(main_fnaf.tabFnaf);
+		item.setCreativeTab(MAIN_FNAF.tabFnaf);
 		
 		GameRegistry.registerItem(item, unlocalizedName);
 	}
@@ -188,7 +187,7 @@ public class FNAFItems {
 		String unlocalizedName = name.toLowerCase().replaceAll(" ", "_").replaceAll("'", "");
 		block.setBlockName(unlocalizedName);
 		block.setBlockTextureName(Reference.MODID + ":" + unlocalizedName);
-		block.setCreativeTab(main_fnaf.tabFnaf);
+		block.setCreativeTab(MAIN_FNAF.tabFnaf);
 		
 		GameRegistry.registerBlock(block, unlocalizedName);
 	}

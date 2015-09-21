@@ -6,10 +6,10 @@ import org.lwjgl.opengl.GL11;
 
 import com.fnaf.Client.achievements.Achievements;
 import com.fnaf.Client.gui.GUIRunMod;
-import com.fnaf.Client.gui.GuiMainMenuFNAF;
 import com.fnaf.Client.gui.jumpscares.GUIBonnieJumpscare;
 import com.fnaf.Client.sound.FNAFSoundHandler;
 import com.fnaf.Common.Entity.Nightmare.Bonnie.EntityNightmareBonnieMob;
+import com.fnaf.Common.Entity.Nightmare.Freddy.EntityNightmareFreddyMob;
 import com.fnaf.Common.Entity.bonnie.EntityBonnieMob;
 import com.fnaf.Common.Entity.goldenfreddy.EntityGoldenFreddyMob;
 import com.fnaf.Common.Entity.plushie.bonnie.EntityBonniePlushie;
@@ -83,8 +83,10 @@ public class Events {
 							
 							player.addStat(Achievements.LoadMod, 1);
 				
-						player.addChatMessage(new ChatComponentText("Welcome to Five nights at Freddy's Mod 4"));
-		   }
+						player.addChatMessage(new ChatComponentText("Welcome to Five nights at Freddy's Mod 4!"));
+		  
+				        	
+			}
 			
 		}
 
@@ -108,7 +110,7 @@ public class Events {
 		        	
 		        }
 		        
-		        if ((event.source.getEntity() instanceof EntityGoldenFreddyMob))
+		        if ((event.source.getEntity() instanceof EntityNightmareFreddyMob))
 		        {
 		    	
 		        	System.out.println(player + "jumpscared by Golden Freddy.");

@@ -8,7 +8,7 @@ public class FNAFSoundHandler {
 	
 	public static void playSound(String name, Entity entity, float volume, float pitch)
 	{
-		entity.worldObj.playSoundAtEntity(entity, (Reference.MODID + name), (float)volume, (float) pitch);
+		entity.worldObj.playSoundAtEntity(entity, ("fnaf:" + name), (float)volume, (float) pitch);
 	}
 	
 	public static void Phonecall1(Entity entity, float volume, float pitch)

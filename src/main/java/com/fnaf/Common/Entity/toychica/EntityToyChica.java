@@ -20,7 +20,7 @@ public class EntityToyChica {
 	public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor){
 		int randomId = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, randomId);
-		EntityRegistry.registerModEntity(entityClass, entityName, randomId, com.fnaf.Common.main.main_fnaf.modInstance, 64, 1, true);
+		EntityRegistry.registerModEntity(entityClass, entityName, randomId, com.fnaf.Common.main.MAIN_FNAF.modInstance, 64, 1, true);
 		EntityRegistry.addSpawn(entityClass, 2, 0, 1, EnumCreatureType.creature, BiomeGenBase.forest);
 		
 		createEgg(randomId, solidColor, spotColor);

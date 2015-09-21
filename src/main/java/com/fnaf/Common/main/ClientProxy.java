@@ -9,7 +9,6 @@ import net.minecraft.client.model.ModelBiped;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 
-import com.fnaf.Client.gui.GuiMainMenuFNAF;
 import com.fnaf.Client.main.renderer.CustomModeledBlockRenderer;
 import com.fnaf.Common.Blocks.Models.ModelBonniePlushie;
 import com.fnaf.Common.Blocks.Models.ModelCamera;
@@ -94,8 +93,6 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 public class ClientProxy extends CommonProxy{
 
 	
-	
-	GuiMainMenuFNAF mm = new GuiMainMenuFNAF();
 	
 	@Override
 	public void registerRenderThings(){

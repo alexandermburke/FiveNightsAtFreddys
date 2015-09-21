@@ -44,7 +44,7 @@ public class EntityRegister {
 	public static void registerEntity(){
 			
 		createEntity(EntityBalloonBoyMob.class, "BalloonBoy", 0xF20521, 0x2011CF);
-		createEntity(EntityNightmareBonnieMob.class, "nightmare Bonnie", 0xF20521, 0x2011CF);
+		createEntity(EntityNightmareBonnieMob.class, "nightmare Bonnie", 0x525051, 0xEBEBEB);
 /*		createEntity(EntityBonnieMob.class, "Bonnie", 0x525051, 0xEBEBEB);
 		createEntity(EntityChicaMob.class, "Chica", 0xDEF22C, 0x707070);
 		createEntity(EntityFoxyMob.class, "Foxy", 0xE64B17, 0xF56B3D);
@@ -66,8 +66,8 @@ public class EntityRegister {
 		createEntity(EntityPhantomMangleMob.class, "Phantom Mangle", 0x525023, 0xEBEBEB);
 		createEntity(EntityNegativeMickeyMob.class, "Negative Mickey", 0x525023, 0xFEFFFC);
 		createEntity(EntityCameraMob.class, "Camera", 0x525023, 0xFEFFFC); */
-		createEntity(EntityBonniePlushie.class, "Bonnie Plushie", 0xE64B17, 0xF56B3D);
-		createEntity(EntityNightmareFreddyMob.class, "NightMare Freddy", 0xE64B17, 0xF56B3D);
+	//	createEntity(EntityBonniePlushie.class, "Bonnie Plushie", 0xE64B17, 0xF56B3D);
+		createEntity(EntityNightmareFreddyMob.class, "NightMare Freddy", 0x7D6706, 0x9C8627);
 		
 		
 		
@@ -103,7 +103,7 @@ public class EntityRegister {
 	public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor){
 		int randomId = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, randomId);
-		EntityRegistry.registerModEntity(entityClass, entityName, randomId, com.fnaf.Common.main.main_fnaf.modInstance, 64, 1, true);
+		EntityRegistry.registerModEntity(entityClass, entityName, randomId, com.fnaf.Common.main.MAIN_FNAF.modInstance, 64, 1, true);
 		EntityRegistry.addSpawn(entityClass, 2, 0, 1, EnumCreatureType.creature, BiomeGenBase.forest);
 		
 		createEgg(randomId, solidColor, spotColor);

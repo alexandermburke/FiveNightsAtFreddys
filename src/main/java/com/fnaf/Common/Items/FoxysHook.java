@@ -1,7 +1,7 @@
 package com.fnaf.Common.Items;
 
 import com.fnaf.Common.Entity.balloonboy.EntityBalloonBoyMob;
-import com.fnaf.Common.main.main_fnaf;
+import com.fnaf.Common.main.MAIN_FNAF;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
@@ -42,7 +42,7 @@ public int getMaxItemUseDuration(ItemStack par1ItemStack)
     	maxStackSize = 1;
     	setUnlocalizedName("FoxysHook");
     	setTextureName("FoxysHook");
-    	setCreativeTab(main_fnaf.tabFnaf);
+    	setCreativeTab(MAIN_FNAF.tabFnaf);
     
 	}
 }

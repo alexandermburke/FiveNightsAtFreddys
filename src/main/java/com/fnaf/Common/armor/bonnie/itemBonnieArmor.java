@@ -1,7 +1,7 @@
 package com.fnaf.Common.armor.bonnie;
 
 import com.fnaf.Common.main.Reference;
-import com.fnaf.Common.main.main_fnaf;
+import com.fnaf.Common.main.MAIN_FNAF;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
@@ -17,7 +17,7 @@ public class itemBonnieArmor extends ItemArmor
     public itemBonnieArmor(ArmorMaterial material, int renderIndex, int armorPiece)
     {
         super(material, renderIndex, armorPiece);
-        this.setCreativeTab(main_fnaf.tabFnaf);
+        this.setCreativeTab(MAIN_FNAF.tabFnaf);
     }
     
     public String getArmorTexture(Item item, String name)
@@ -25,7 +25,7 @@ public class itemBonnieArmor extends ItemArmor
     	String unlocalizedName = name.toLowerCase().replaceAll(" ", "_").replaceAll("'", "");
 		item.setUnlocalizedName(unlocalizedName);
 		item.setTextureName(Reference.MODID + ":" + unlocalizedName);
-		item.setCreativeTab(main_fnaf.tabFnaf);
+		item.setCreativeTab(MAIN_FNAF.tabFnaf);
 		return unlocalizedName;
 		
 		

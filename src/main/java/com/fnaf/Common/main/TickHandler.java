@@ -1,7 +1,6 @@
 package com.fnaf.Common.main;
 
 import com.fnaf.Client.gui.GUIRunMod;
-import com.fnaf.Client.gui.GuiMainMenuFNAF;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;

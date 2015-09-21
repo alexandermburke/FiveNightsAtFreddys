@@ -5,7 +5,7 @@ import java.util.List;
 import com.fnaf.Common.Entity.bonnie.Bonnie;
 import com.fnaf.Common.main.ClientProxy;
 import com.fnaf.Common.main.Reference;
-import com.fnaf.Common.main.main_fnaf;
+import com.fnaf.Common.main.MAIN_FNAF;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;

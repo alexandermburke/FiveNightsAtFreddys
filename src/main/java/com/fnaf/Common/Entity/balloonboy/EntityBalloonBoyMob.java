@@ -46,14 +46,14 @@ public class EntityBalloonBoyMob extends EntityMob{
 	
 	protected String getLivingSound()
 	{
-	    return "fnafvtwo:bbliving";
+	    return "fnaf:bbliving";
 	}
 	protected String getHurtSound()
 	{
-	    return "fnafvtwo:enhale1";
+	    return "fnaf:enhale1";
 	}
 	protected String getDeathSound()
 	{
-	    return "fnafvtwo:enhale1";
+	    return "fnaf:enhale1";
 	}
 }

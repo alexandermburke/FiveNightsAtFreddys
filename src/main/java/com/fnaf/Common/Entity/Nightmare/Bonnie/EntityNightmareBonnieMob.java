@@ -44,14 +44,14 @@ public class EntityNightmareBonnieMob extends EntityMob{
 
 	protected String getLivingSound()
 	{
-	    return "fnafvtwo:moan";
+	    return "fnaf:moan";
 	}
 	protected String getHurtSound()
 	{
-	    return "fnafvtwo:voicez";
+	    return "fnaf:voicez";
 	}
 	protected String getDeathSound()
 	{
-	    return "fnafvtwo:deathscream";
+	    return "fnaf:deathscream";
 	}
 }

@@ -3,7 +3,7 @@ package com.fnaf.Common.Items;
 import java.util.List;
 
 import com.fnaf.Common.Entity.plushie.bonnie.EntityBonniePlushie;
-import com.fnaf.Common.main.main_fnaf;
+import com.fnaf.Common.main.MAIN_FNAF;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -22,7 +22,7 @@ public class ItemPlush extends Item
 {
 public ItemPlush()
 {
-setCreativeTab(main_fnaf.tabFnaf);
+setCreativeTab(MAIN_FNAF.tabFnaf);
 }
 
 

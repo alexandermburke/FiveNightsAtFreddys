@@ -2,7 +2,7 @@ package com.fnaf.Common.armor.freddy;
 
 import com.fnaf.Client.gui.GUIDevMode;
 import com.fnaf.Client.gui.GUIMask;
-import com.fnaf.Common.main.main_fnaf;
+import com.fnaf.Common.main.MAIN_FNAF;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -21,7 +21,7 @@ public class itemFreddyArmor extends ItemArmor
     public itemFreddyArmor(ArmorMaterial material, int renderIndex, int armorPiece)
     {
         super(material, renderIndex, armorPiece);
-        this.setCreativeTab(main_fnaf.tabFnaf);
+        this.setCreativeTab(MAIN_FNAF.tabFnaf);
     }
     
    
@@ -31,7 +31,7 @@ public class itemFreddyArmor extends ItemArmor
     	String unlocalizedName = name.toLowerCase().replaceAll(" ", "_").replaceAll("'", "");
 		item.setUnlocalizedName(unlocalizedName);
 		item.setTextureName("fnaf2" + ":" + unlocalizedName);
-		item.setCreativeTab(main_fnaf.tabFnaf);
+		item.setCreativeTab(MAIN_FNAF.tabFnaf);
 		return unlocalizedName;
 		
 		
