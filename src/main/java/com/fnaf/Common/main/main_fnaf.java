@@ -145,7 +145,7 @@ public class MAIN_FNAF
     public void PreLoad(FMLPreInitializationEvent PreEvent)
     {
 			
-     	GameRegistry.registerWorldGenerator(new WorldGenSU(), 0);
+  //   	GameRegistry.registerWorldGenerator(new WorldGenSU(), 0);
 
      //   MinecraftForge.EVENT_BUS.register(new Events());
     //	FMLCommonHandler.instance().bus().register(new Events());
