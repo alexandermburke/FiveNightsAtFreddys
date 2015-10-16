@@ -3,7 +3,7 @@ package com.fnaf.Common.Items;
 import java.util.List;
 
 import com.fnaf.Common.Entity.plushie.bonnie.EntityBonniePlushie;
-import com.fnaf.Common.main.MAIN_FNAF;
+import com.fnaf.Common.mod.MAIN_FNAF;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;

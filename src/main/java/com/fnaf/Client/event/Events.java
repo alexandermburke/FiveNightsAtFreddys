@@ -5,8 +5,9 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 
 import com.fnaf.Client.achievements.Achievements;
+import com.fnaf.Client.gui.GUIMainMenuFNAF;
 import com.fnaf.Client.gui.GUIRunMod;
-import com.fnaf.Client.gui.jumpscares.GUIBonnieJumpscare;
+import com.fnaf.Client.gui.GuiMainMenuWarning;
 import com.fnaf.Client.sound.FNAFSoundHandler;
 import com.fnaf.Common.Entity.Nightmare.Bonnie.EntityNightmareBonnieMob;
 import com.fnaf.Common.Entity.Nightmare.Freddy.EntityNightmareFreddyMob;
@@ -14,11 +15,12 @@ import com.fnaf.Common.Entity.bonnie.EntityBonnieMob;
 import com.fnaf.Common.Entity.goldenfreddy.EntityGoldenFreddyMob;
 import com.fnaf.Common.Entity.plushie.bonnie.EntityBonniePlushie;
 import com.fnaf.Common.Items.FNAFItems;
-import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.mod.Reference;
 
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.client.gui.ScaledResolution;
@@ -38,6 +40,7 @@ import net.minecraftforge.event.entity.player.EntityInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
 import net.minecraftforge.event.world.WorldEvent;
 
+//@SideClient(Side.CLIENT)
 public class Events {
 
 	  
@@ -52,6 +55,27 @@ public class Events {
 		
 			}
 			 
+			 @SuppressWarnings("unused")
+			@SubscribeEvent
+				public void onGuiOpenEvent(GuiOpenEvent event) {
+					if (event.gui instanceof GuiMainMenu) {
+						if (!(event.gui instanceof GUIMainMenuFNAF)) {
+							if (/*ModDNAT.instance.clientSettings.hasMainMenuWarningBeenShown*/ true) {
+								Minecraft.getMinecraft().currentScreen=(
+										new GuiMainMenuWarning());
+							} else {
+								Minecraft.getMinecraft().displayGuiScreen(
+										new GUIMainMenuFNAF());
+							}
+						}else{
+							System.out.println("Instance of DNATGuiMainMenu");
+						}
+
+					}else{
+						System.out.println("Gui opened: no instance of GuiMainMenu.");
+					}
+				}
+			
 						
 						
 			@SubscribeEvent
@@ -139,46 +163,6 @@ public class Events {
 	
 	
 	
-	public void renderHelmetOverlay(ItemStack stack, EntityPlayer player, ScaledResolution resolution, float partialTicks, boolean hasScreen, int mouseX, int mouseY)
-    {
-    	ScaledResolution res = new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
-		int width = res.getScaledWidth();
-		int height = res.getScaledHeight();
-		
-		if (res != null)
-		{
-	        Tessellator tessellator = Tessellator.instance;
-
-			GL11.glDisable(GL11.GL_TEXTURE_2D);
-			GL11.glColor4f(0.0F, 0.0F, 0.0F, 0.6F);
-	        tessellator.startDrawingQuads();
-	        tessellator.addVertexWithUV(0.0D, (double)height, -90.0D, 0.0D, 1.0D);
-	        tessellator.addVertexWithUV((double)width, (double)height, -90.0D, 1.0D, 1.0D);
-	        tessellator.addVertexWithUV((double)width, 0.0D, -90.0D, 1.0D, 0.0D);
-	        tessellator.addVertexWithUV(0.0D, 0.0D, -90.0D, 0.0D, 0.0D);
-	        tessellator.draw();
-	        GL11.glEnable(GL11.GL_TEXTURE_2D);
-	        
-			GL11.glEnable(GL11.GL_BLEND);
-	    	GL11.glDisable(GL11.GL_DEPTH_TEST);
-	        GL11.glDepthMask(false);
-	        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-	        float f = 0.5F;
-	        GL11.glColor4f(f, f, f, 1.0F);
-	        GL11.glDisable(GL11.GL_ALPHA_TEST);
-	        Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation(Reference.MODID, "textures/gui/freddymask.png"));
-	        tessellator.startDrawingQuads();
-	        tessellator.addVertexWithUV(0.0D, (double)height, -90.0D, 0.0D, 1.0D);
-	        tessellator.addVertexWithUV((double)width, (double)height, -90.0D, 1.0D, 1.0D);
-	        tessellator.addVertexWithUV((double)width, 0.0D, -90.0D, 1.0D, 0.0D);
-	        tessellator.addVertexWithUV(0.0D, 0.0D, -90.0D, 0.0D, 0.0D);
-	        tessellator.draw();
-	        GL11.glDepthMask(true);
-	        GL11.glEnable(GL11.GL_DEPTH_TEST);
-	        GL11.glEnable(GL11.GL_ALPHA_TEST);
-	        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);	        
-		}
-    }
 	
 		  
 }

@@ -11,7 +11,7 @@ public class Achievements {
 	
 	
 
-	 public static Achievement LoadMod = (new Achievement("achievement.fivenightsatfreddys_mod", "fivenightsatfreddys_mod", 0, 0, FNAFItems.Foxyshook1, null)).initIndependentStat().registerStat();
+	 public static Achievement LoadMod = (new Achievement("achievement.fivenightsatfreddys_mod", "fivenightsatfreddys_mod", 0, 0, FNAFItems.Hook, null)).initIndependentStat().registerStat();
 	   
 	 public static Achievement KilledByAmythest = (new Achievement("achievement.killed_by_animatronics", "killed_by_animatronics", 0, 0, FNAFItems.FreddyHelmet, null)).initIndependentStat().registerStat();
 		

@@ -1,10 +1,10 @@
 package com.fnaf.Client.utils;
 
-import com.fnaf.Common.main.Reference;
-
 import cpw.mods.fml.common.FMLLog;
 
 import org.apache.logging.log4j.Level;
+
+import com.fnaf.Common.mod.Reference;
 
 public class LogHelper
 {

@@ -1,6 +1,6 @@
 package com.fnaf.Common.Entity.balloonboy;
 
-import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.mod.Reference;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;

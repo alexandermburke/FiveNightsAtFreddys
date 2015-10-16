@@ -20,7 +20,6 @@ public class CreativeTabFNAF extends CreativeTabs {
     @SideOnly(Side.CLIENT)
     public Item getTabIconItem() {
  
-        //return Item.getItemFromBlock(Blocks.chest);
-        return FNAFItems.BBPlushie;
+       return FNAFItems.logo;
     }
 }

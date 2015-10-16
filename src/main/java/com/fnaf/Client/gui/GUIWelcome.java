@@ -1,10 +1,10 @@
 package com.fnaf.Client.gui;
 
+import com.fnaf.Common.mod.Reference;
+
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
-
-import com.fnaf.Common.main.Reference;
 
 public class GUIWelcome extends GuiScreen{
 

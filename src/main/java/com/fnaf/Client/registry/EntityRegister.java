@@ -1,6 +1,5 @@
 package com.fnaf.Client.registry;
 
-import com.fnaf.Common.Entity.Camera.EntityCameraMob;
 import com.fnaf.Common.Entity.Nightmare.Bonnie.EntityNightmareBonnieMob;
 import com.fnaf.Common.Entity.Nightmare.Freddy.EntityNightmareFreddyMob;
 import com.fnaf.Common.Entity.Phantom.bb.EntityPhantomBalloonBoyMob;
@@ -16,6 +15,7 @@ import com.fnaf.Common.Entity.WitheredFreddy.EntityWitheredFreddyMob;
 import com.fnaf.Common.Entity.balloonboy.EntityBalloonBoy;
 import com.fnaf.Common.Entity.balloonboy.EntityBalloonBoyMob;
 import com.fnaf.Common.Entity.bonnie.EntityBonnieMob;
+import com.fnaf.Common.Entity.camera.EntityCameraMob;
 import com.fnaf.Common.Entity.chica.EntityChicaMob;
 import com.fnaf.Common.Entity.fnati.NM.EntityNegativeMickeyMob;
 import com.fnaf.Common.Entity.foxy.EntityFoxyMob;
@@ -103,7 +103,7 @@ public class EntityRegister {
 	public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor){
 		int randomId = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, randomId);
-		EntityRegistry.registerModEntity(entityClass, entityName, randomId, com.fnaf.Common.main.MAIN_FNAF.modInstance, 64, 1, true);
+		EntityRegistry.registerModEntity(entityClass, entityName, randomId, com.fnaf.Common.mod.MAIN_FNAF.modInstance, 64, 1, true);
 		EntityRegistry.addSpawn(entityClass, 2, 0, 1, EnumCreatureType.creature, BiomeGenBase.forest);
 		
 		createEgg(randomId, solidColor, spotColor);

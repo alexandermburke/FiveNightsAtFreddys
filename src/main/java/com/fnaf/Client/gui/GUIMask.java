@@ -2,7 +2,7 @@ package com.fnaf.Client.gui;
 
 import org.lwjgl.opengl.GL11;
 
-import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.mod.Reference;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;

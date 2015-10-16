@@ -6,7 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
 import com.fnaf.Common.Entity.Phantom.chica.EntityPhantomChicaMob;
-import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.mod.Reference;
 
 public class RenderPhantomFoxy extends RenderLiving{
 

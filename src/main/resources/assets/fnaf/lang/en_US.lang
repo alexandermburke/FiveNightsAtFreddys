@@ -32,6 +32,15 @@ entity.toybonnie.name=Toy Bonnie
 entity.toychica.name=Toy Chica 
 entity.toyfreddy.name=Toy Freddy
 
+======Gen======
+
+generator.fnaf=Five Nights at Freddys
+
+generator.FNAF=Five Nights at Freddys
+
+generator.FNAF.name=Five Nights at Freddys
+
+
 
 ======Items======
 

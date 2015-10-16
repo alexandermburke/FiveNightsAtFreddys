@@ -1,12 +1,13 @@
 package com.fnaf.Common.armor.bonnie;
 
-import com.fnaf.Common.main.Reference;
-import com.fnaf.Common.main.MAIN_FNAF;
-
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+
+import com.fnaf.Common.mod.MAIN_FNAF;
+import com.fnaf.Common.mod.Reference;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;

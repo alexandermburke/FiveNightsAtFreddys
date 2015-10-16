@@ -7,7 +7,7 @@ import net.minecraft.util.ResourceLocation;
 
 import com.fnaf.Common.Entity.Phantom.foxy.EntityPhantomFoxy;
 import com.fnaf.Common.Entity.Phantom.foxy.EntityPhantomFoxyMob;
-import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.mod.Reference;
 
 public class RenderNegativeMickey extends RenderLiving{
 

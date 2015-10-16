@@ -1,4 +1,4 @@
-package com.fnaf.Common.Entity.Camera;
+package com.fnaf.Common.Entity.camera;
 
 public class Camera {
 

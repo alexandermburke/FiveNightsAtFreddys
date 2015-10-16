@@ -9,8 +9,9 @@ import com.fnaf.Client.gui.GUIDevMode;
 import com.fnaf.Client.gui.GUIMask;
 import com.fnaf.Client.sound.FNAFSoundHandler;
 import com.fnaf.Common.Items.FNAFItems;
-import com.fnaf.Common.main.Reference;
-import com.fnaf.Common.main.MAIN_FNAF;
+import com.fnaf.Common.mod.MAIN_FNAF;
+import com.fnaf.Common.mod.Reference;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.model.ModelBiped;

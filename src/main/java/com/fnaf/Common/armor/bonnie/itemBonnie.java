@@ -3,9 +3,9 @@ package com.fnaf.Common.armor.bonnie;
 import java.util.List;
 
 import com.fnaf.Common.Entity.bonnie.Bonnie;
-import com.fnaf.Common.main.ClientProxy;
-import com.fnaf.Common.main.Reference;
-import com.fnaf.Common.main.MAIN_FNAF;
+import com.fnaf.Common.mod.ClientProxy;
+import com.fnaf.Common.mod.MAIN_FNAF;
+import com.fnaf.Common.mod.Reference;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;

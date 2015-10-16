@@ -1,6 +1,7 @@
 package com.fnaf.Client.sound;
 
-import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.mod.Reference;
+
 import net.minecraft.entity.Entity;
 
 public class FNAFSoundHandler {

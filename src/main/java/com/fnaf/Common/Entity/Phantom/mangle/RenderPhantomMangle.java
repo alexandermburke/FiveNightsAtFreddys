@@ -6,7 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
 import com.fnaf.Common.Entity.Phantom.bb.EntityPhantomBalloonBoyMob;
-import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.mod.Reference;
 
 public class RenderPhantomMangle extends RenderLiving{
 

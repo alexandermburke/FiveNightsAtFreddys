@@ -3,7 +3,7 @@ package com.fnaf.Common.Blocks.render;
 import org.lwjgl.opengl.GL11;
 
 import com.fnaf.Common.Blocks.Models.ModelLootBox;
-import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.mod.Reference;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;

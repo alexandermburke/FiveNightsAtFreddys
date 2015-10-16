@@ -4,7 +4,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.fnaf.Common.Blocks.Models.ModelCamera;
 import com.fnaf.Common.Blocks.Models.ModelFNAF3Box;
-import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.mod.Reference;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;

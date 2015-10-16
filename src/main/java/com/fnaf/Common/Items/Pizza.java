@@ -1,6 +1,6 @@
 package com.fnaf.Common.Items;
 
-import com.fnaf.Common.main.Reference;
+import com.fnaf.Common.mod.Reference;
 
 import net.minecraft.item.ItemFood;
 
