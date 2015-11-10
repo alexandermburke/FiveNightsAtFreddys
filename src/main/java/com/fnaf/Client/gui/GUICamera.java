@@ -35,10 +35,10 @@ public class GUICamera extends GuiScreen {
 				
 		this.buttonList.add(new GuiButton(((page * 5) - 4), 5, this.height - 45, 20, 20, "<"));
         
-	//	main_fnaf.log("'<' button: " + ((page * 5) - 4) + " '>' button: " + ((page * 5) + 2) + " Camera buttons: " + ((page * 5) - 3) + " thru " + ((page * 5) + 1) + " Array size: " + cameraMonitor.getCameraPositions(nbtTag).size());
+	main_fnaf.log("'<' button: " + ((page * 5) - 4) + " '>' button: " + ((page * 5) + 2) + " Camera buttons: " + ((page * 5) - 3) + " thru " + ((page * 5) + 1) + " Array size: " + cameraMonitor.getCameraPositions(nbtTag).size());
 		int counter = 1;
 		for(int i = ((page * 5) - 3); i <= ((page * 5) + 1); i++){
-	//		if(i - 2 < cameraMonitor.getCameraPositions(nbtTag).size() && cameraMonitor.getCameraPositions(nbtTag).get(i - 2) != null){
+			if(i - 2 < cameraMonitor.getCameraPositions(nbtTag).size() && cameraMonitor.getCameraPositions(nbtTag).get(i - 2) != null){
 				this.buttonList.add(new GuiButton(i, -25 + ((counter) * 70), this.height - 45, 60, 20, "Camera #" + (i - 1)));
 			}
 			
@@ -48,10 +48,10 @@ public class GUICamera extends GuiScreen {
 		this.buttonList.add(new GuiButton(((page * 5) + 2), this.width - 25, this.height - 45, 20, 20, ">"));
 		
 		//TODO
-//		if(cameraMonitor.getCameraPositions(nbtTag).size() <= ((page * 5) + 1)){
-//			((GuiButton) this.buttonList.get(((page * 5) - 4))).visible = false;
-//			((GuiButton) this.buttonList.get(((page * 5) + 2))).visible = false;
-//		}
+		if(cameraMonitor.getCameraPositions(nbtTag).size() <= ((page * 5) + 1)){
+			((GuiButton) this.buttonList.get(((page * 5) - 4))).visible = false;	
+			((GuiButton) this.buttonList.get(((page * 5) + 2))).visible = false;
+		}
     }
 	
     public void onGuiClosed(){
